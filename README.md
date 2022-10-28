@@ -1,5 +1,3 @@
-# Chatbot Projektmodul Start
+# Personal Bar
 
-Beschreiben Sie kurz Ihre Projektidee (mit Bild oder Storyboard)
-
-Verweisen Sie für mehr Information auf die Wiki Seite
+Ein Bot der je nach Bedürfnis/Mood/Geschmack Retzepte für alkoholische und nicht alkoholische Getränke anbietet, und tipps zu Zubereitung gibt.
