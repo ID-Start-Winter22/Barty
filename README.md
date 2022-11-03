@@ -41,12 +41,8 @@ Kriterien:
 
 
 # Warum will ich den Chatbot als Nutzer:in verwenden? 
-- Einfacher Rezepte finden
-- Neue Sachen ausprobieren
+- Einfacher Rezepte finden -> Zeit sparen
+- Neue Sachen ausprobieren -> Horizont erweitern
 - Schnellere Entscheidungen treffen
 - Antwort auf Inventar begrenzt
-
-# Was ist unsere Hypothese?
-- Zeit sparend 
-- Horizont erweitern
 - Unterhaltung
