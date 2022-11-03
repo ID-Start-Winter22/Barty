@@ -1,4 +1,4 @@
-#1 Personal Bar
+# Personal Bar
 
 Ein Bot der je nach Bedürfnis/Mood/Geschmack Retzepte für alkoholische und nicht alkoholische Getränke anbietet, und tipps zu Zubereitung gibt.
 
@@ -11,13 +11,13 @@ Kriterien:
   
  => Der Perfekte Cocktail für die Aktuelle situation
  
- #2 Wo kann man es verwenden
+ # Wo kann man es verwenden
  - Hausparty
  - Onlinegetränkekarte von Bar (Verknüpfen)
  - Bestellautomat Bar
  - Privat
  
- #2 Was kann der Chatbot
+ # Was kann der Chatbot
  - Fragen zum gewünschten Geschmack / Stärke / Art
  - Cocktail oder Mocktail
  - Fragen zum vorhandene Inventar / Zutaten 
@@ -32,14 +32,14 @@ Kriterien:
  - Eigenes Inventar anlegen (Liste / Neue Zutaten hinzufügen)
  - Zufälliges Getränk
  
-#2 Was kann er nicht (Umfang des Chatbots)
+# Was kann er nicht (Umfang des Chatbots)
 - Neue Rezepte erfinden
 - Rezepte aus dem Internet beziehen
 - Alternative Zutatenvorschläge
 
 
-#2 Warum will ich den Chatbot als Nutzer:in verwenden? 
+# Warum will ich den Chatbot als Nutzer:in verwenden? 
 - Einfacher Rezepte finden
 
-#2 Was ist unsere Hypothese?
+# Was ist unsere Hypothese?
 - 
