@@ -3,11 +3,11 @@
 Ein Bot der je nach Bedürfnis/Mood/Geschmack Retzepte für alkoholische und nicht alkoholische Getränke anbietet, und tipps zu Zubereitung gibt.
 
 Kriterien:
-  -Geschmack Erfrischend, Süß, Sauer, Scharf, Fruchtig, Hauptsache Alkohol, 
-  -Musst du wach bleiben
-  -Hast du einen Shaker
-  -Wie Dicht bist du
-  -Musst du morgen was schaffen
+  - Geschmack Erfrischend, Süß, Sauer, Scharf, Fruchtig, Hauptsache Alkohol, 
+  - Musst du wach bleiben
+  - Hast du einen Shaker
+  - Wie Dicht bist du
+  - Musst du morgen was schaffen
   
  => Der Perfekte Cocktail für die Aktuelle situation
  
@@ -18,7 +18,8 @@ Kriterien:
  - Privat
  
  # Was kann der Chatbot
- - Fragen zum gewünschten Geschmack / Stärke / Art
+ - Anfangs Auswahlmenü
+ -  Fragen zum gewünschten Geschmack / Stärke / Art
  - Cocktail oder Mocktail
  - Fragen zum vorhandene Inventar / Zutaten 
  - Fragen zum Anlass
@@ -31,6 +32,7 @@ Kriterien:
  - Grafisch den Füllstand darstellen
  - Eigenes Inventar anlegen (Liste / Neue Zutaten hinzufügen)
  - Zufälliges Getränk
+ - Nach bestimmten Cocktail fragen
  
 # Was kann er nicht (Umfang des Chatbots)
 - Neue Rezepte erfinden
@@ -40,6 +42,11 @@ Kriterien:
 
 # Warum will ich den Chatbot als Nutzer:in verwenden? 
 - Einfacher Rezepte finden
+- Neue Sachen ausprobieren
+- Schnellere Entscheidungen treffen
+- Antwort auf Inventar begrenzt
 
 # Was ist unsere Hypothese?
-- 
+- Zeit sparend 
+- Horizont erweitern
+- Unterhaltung
