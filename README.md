@@ -40,7 +40,7 @@ Kriterien:
 - Alternative Zutatenvorschläge
 
 
-# Warum will ich den Chatbot als Nutzer:in verwenden? 
+# Warum will ich den Chatbot als Nutzer:in verwenden / Hypothese 
 - Einfacher Rezepte finden -> Zeit sparen
 - Neue Sachen ausprobieren -> Horizont erweitern
 - Schnellere Entscheidungen treffen
