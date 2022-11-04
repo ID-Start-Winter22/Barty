@@ -46,3 +46,4 @@ Kriterien:
 - Schnellere Entscheidungen treffen
 - Antwort auf Inventar begrenzt
 - Unterhaltung
+
