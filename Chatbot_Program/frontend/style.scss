@@ -1,0 +1,159 @@
+$bg-primary: #615756;
+$bg-secondary: #211D1C;
+$bg-cta: #34434A;
+$drop-shadow: 2px 2px 8px #00000080;
+$drop-shadow-hover: 4px 4px 16px #5A6E79;
+$drop-shadow-active: 2px 2px 8px #0f5a93;
+$text: #E3DDDD;
+
+
+body {
+    background: $bg-primary;
+    color: $text;
+    height: calc(100vh - 2rem);
+    width: calc(100vw - 2rem);
+    margin: 0 !important;
+    overflow: hidden;
+    display: block;
+    position: relative;
+
+    .chat-container {
+        background: $bg-secondary;
+        border-radius: 1rem;
+        height: calc(100% - 1rem);
+        width: 50vh;
+        max-width: 100%;
+        overflow: hidden;
+        display: flex;
+        flex-flow: column;
+        gap: .5rem;
+
+        .scroll-container {
+            width: calc(100% - 3rem);
+            flex-grow: 1;
+            overflow: hidden auto;
+            padding: 2rem 1.5rem;
+
+            .message-row {
+                width: 100%;
+                display: flex;
+                flex-flow: row;
+                margin-bottom: 1rem;
+
+                .message-container {
+                background-color: $bg-cta;
+                width: fit-content;
+                height: fit-content;
+                border-radius: .5rem;
+                padding: .5rem;
+                float: end;
+
+                .message-text {
+                    padding: 0;
+                    margin: 0;
+                    font-size: 1.5rem;
+                }
+            }
+            }
+
+            
+        }
+
+        .send-form {
+            flex-grow: 0;
+            width: calc(100% - 2rem);
+            display: flex;
+            flex-flow: row;
+            gap: 1rem;
+            padding: 1rem;
+
+            .message-input {
+                flex-grow: 1;
+                height: 100%;
+                color: $text;
+                background: $bg-cta;
+                border-radius: .5rem;
+                border: none;
+                padding: 0 1rem;
+                box-shadow: $drop-shadow;
+                font-size: 1.5rem;
+            }
+
+            .send-button {
+                aspect-ratio: 1 / 1;
+                padding: .5rem;
+                background: $bg-cta;
+                border-radius: .5rem;
+                border: none;
+                box-shadow: $drop-shadow;
+                will-change: box-shadow, background-color;
+                transition: all 150ms;
+
+                &:hover {
+                    box-shadow: $drop-shadow-hover;
+                    background-color: $bg-cta;
+                }
+
+                &:active {
+                    box-shadow: $drop-shadow-active;
+                    background-color: $bg-cta;
+                }
+
+                .send-button-image {
+                    width: 2rem;
+                    height: 2rem;
+                    padding: 0;
+                    margin: 0;
+                    background-size: auto;
+                    background-repeat: no-repeat;
+                }
+            }
+        }
+    }
+
+    .css-1kgb40s {
+        position: absolute;
+        height: 75vh !important;
+        width: 75vw !important;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+
+        & > div[style] {
+            flex-grow: 1 !important;
+            height: 100% !important;
+            width: 100% !important;
+            border: none !important;
+            border-radius: 1rem !important;
+
+            .css-qpwdbp {
+                background-color: $bg-secondary !important;
+
+                .css-1403hqg {
+                    background-color: $bg-cta;
+                    color: $text !important;
+                }
+
+                .css-1di2tiy {
+                    background-color: $bg-primary;
+                    color: $text !important;
+                }
+            }
+
+            .css-2gik0r {
+                background-color: $bg-cta !important;
+                border: none !important;
+
+                .css-lavkg7 {
+                    background-color: $bg-cta !important;
+                    color: $text !important;
+                }
+            }
+        }
+
+        .css-vurnku {
+            display: none;
+        }
+    }
+
+}

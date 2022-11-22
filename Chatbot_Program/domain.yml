@@ -3,31 +3,26 @@ version: "3.1"
 intents:
   - greet
   - goodbye
-  - affirm
-  - deny
-  - mood_great
-  - mood_unhappy
+  - drink
+  - recipe
   - bot_challenge
 
 responses:
   utter_greet:
-  - text: "Hey! How are you?"
+  - text: "Hi👋. Wie kann ich dir helfen?"
 
-  utter_cheer_up:
-  - text: "Here is something to cheer you up:"
-    image: "https://i.imgur.com/nGF1K8f.jpg"
+  utter_choose_help:
+  - text: "Willst du ein Rezept für ein Cocktail oder ein zufälliges Mischgetränk."
 
-  utter_did_that_help:
-  - text: "Did that help you?"
-
-  utter_happy:
-  - text: "Great, carry on!"
+  utter_taste:
+  - text: "Nach was ist dir denn."
 
   utter_goodbye:
   - text: "Bye"
 
   utter_iamabot:
-  - text: "I am a bot, powered by Rasa."
+  - text: "Ich bin Barty. Dein perönlicher ChatBot um den idealen Cocktail für jede situation zu finden. \n 
+          Du kanns mich jederzeit nach Rat fragen."
 
 session_config:
   session_expiration_time: 60
