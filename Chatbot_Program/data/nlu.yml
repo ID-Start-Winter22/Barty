@@ -83,3 +83,26 @@ nlu:
     - bist du eine maschiene?
     - mit wem schreib ich?
     - mit wem schreibe ich?
+
+- intent: fresh
+  examples: | 
+    - etwas frisches
+    - was erfrischendes
+    - etwas kühles
+    - was frisches
+    - etwas erfrischendes
+    - was kaltes
+
+- intent: caipirinha
+  examples: | 
+    - caipirinha
+    - Ich nehm den caipirinha
+    - den caipirinha
+    - den caipi
+    ich nehm den caipi
+
+- intent: mojito
+  examples: | 
+    - mojito
+    - Ich nehm den mojito
+    - Den mojito

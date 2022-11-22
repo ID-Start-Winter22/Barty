@@ -29,7 +29,7 @@ stories:
 #   - intent: deny
 #   - action: utter_goodbye
 
-- story: recipe 1
+- story: recipe-caipirinha
   steps:
   - intent: greet
   - action: utter_greet
@@ -37,3 +37,20 @@ stories:
   - action: utter_choose_help
   - intent: recipe
   - action: utter_taste
+  - intent: fresh
+  - action: utter_propose_fresh_recipe
+  - intent: caipirinha
+  - action: utter_caipirinha_recipe
+
+- story: recipe-mojito
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: drink
+  - action: utter_choose_help
+  - intent: recipe
+  - action: utter_taste
+  - intent: fresh
+  - action: utter_propose_fresh_recipe
+  - intent: mojito
+  - action: utter_mojito_recipe

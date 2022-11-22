@@ -5,7 +5,10 @@ intents:
   - goodbye
   - drink
   - recipe
+  - fresh
   - bot_challenge
+  - mojito
+  - caipirinha
 
 responses:
   utter_greet:
@@ -23,6 +26,21 @@ responses:
   utter_iamabot:
   - text: "Ich bin Barty. Dein perönlicher ChatBot um den idealen Cocktail für jede situation zu finden. \n 
           Du kanns mich jederzeit nach Rat fragen."
+
+  utter_propose_fresh_recipe:
+  - text: "Das wären 2 Frische Getränke. Welches Willst du?"
+    buttons:
+    - title: "Caipirinha"
+      payload: "Caipirinha"
+    - title: "Mojito"
+      payload: "Mojito"
+
+  utter_mojito_recipe:
+  - text: "Hier ist das Retzept für einen Mojito."
+
+  utter_caipirinha_recipe:
+  - text: "Hier ist das Retzept für einen Caipirinha."
+    
 
 session_config:
   session_expiration_time: 60

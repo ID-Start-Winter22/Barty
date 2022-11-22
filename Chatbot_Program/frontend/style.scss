@@ -17,10 +17,37 @@ body {
     display: block;
     position: relative;
 
+    .header {
+        position: fixed;
+        top: 2.5%;
+        left: 50%;
+        transform: translateX(-50%);
+        display: flex;
+        gap: 1rem;
+        flex-flow: row;
+        align-items: center;
+
+        .logo {
+            height: 4rem;
+            width: 4rem;
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+
+        .title {
+            font-size: 4rem;
+            margin: 0;
+        }
+    }
+
     .chat-container {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, calc(-50% + 1rem));
         background: $bg-secondary;
         border-radius: 1rem;
-        height: calc(100% - 1rem);
+        height: 100%;
         width: 50vh;
         max-width: 100%;
         overflow: hidden;
@@ -41,22 +68,22 @@ body {
                 margin-bottom: 1rem;
 
                 .message-container {
-                background-color: $bg-cta;
-                width: fit-content;
-                height: fit-content;
-                border-radius: .5rem;
-                padding: .5rem;
-                float: end;
+                    background-color: $bg-cta;
+                    width: fit-content;
+                    height: fit-content;
+                    border-radius: .5rem;
+                    padding: .5rem;
+                    float: end;
 
-                .message-text {
-                    padding: 0;
-                    margin: 0;
-                    font-size: 1.5rem;
+                    .message-text {
+                        padding: 0;
+                        margin: 0;
+                        font-size: 1.5rem;
+                    }
                 }
             }
-            }
 
-            
+
         }
 
         .send-form {
@@ -119,7 +146,7 @@ body {
         top: 50%;
         transform: translate(-50%, -50%);
 
-        & > div[style] {
+        &>div[style] {
             flex-grow: 1 !important;
             height: 100% !important;
             width: 100% !important;
@@ -151,9 +178,53 @@ body {
             }
         }
 
-        .css-vurnku {
+        .css-hbb298 {
             display: none;
         }
+
+        .css-vurnku {
+
+            background-color: transparent;
+
+            &>button {
+                background-color: $bg-cta;
+                color: $text;
+
+                :hover {
+                    background-color: lighten($bg-cta, 10) !important;
+                    box-shadow: $drop-shadow-hover !important;
+                }
+
+                :active {
+                    background-color: lighten($bg-cta, 5) !important;
+                    box-shadow: $drop-shadow-active !important;
+                }
+            }
+        }
+
+        .css-klsenx {
+            display: flex;
+            flex-flow: row;
+            gap: .5rem;
+            padding-left: 2rem;
+        }
+
+        .css-463jce {
+            height: fit-content;
+            width: fit-content;
+
+            .css-wpkmsk {
+                height: 44px;
+                width: 44px;
+                background: transparent !important;
+
+                &>img {
+                    width: 48px;
+                    height: 48px;
+                }
+            }
+        }
+
     }
 
 }

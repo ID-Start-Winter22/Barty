@@ -8,10 +8,34 @@ body {
   display: block;
   position: relative;
 }
+body .header {
+  position: fixed;
+  top: 2.5%;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 1rem;
+  flex-flow: row;
+  align-items: center;
+}
+body .header .logo {
+  height: 4rem;
+  width: 4rem;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+body .header .title {
+  font-size: 4rem;
+  margin: 0;
+}
 body .chat-container {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, calc(-50% + 1rem));
   background: #211D1C;
   border-radius: 1rem;
-  height: calc(100% - 1rem);
+  height: 100%;
   width: 50vh;
   max-width: 100%;
   overflow: hidden;
@@ -127,6 +151,44 @@ body .css-1kgb40s > div[style] .css-2gik0r .css-lavkg7 {
   background-color: #34434A !important;
   color: #E3DDDD !important;
 }
-body .css-1kgb40s .css-vurnku {
+body .css-1kgb40s .css-hbb298 {
   display: none;
+}
+body .css-1kgb40s .css-vurnku {
+  background-color: transparent;
+}
+body .css-1kgb40s .css-vurnku > button {
+  background-color: #34434A;
+  color: #E3DDDD;
+}
+body .css-1kgb40s .css-vurnku > button :hover {
+  background-color: #495e68 !important;
+  box-shadow: 4px 4px 16px #5A6E79 !important;
+}
+body .css-1kgb40s .css-vurnku > button :active {
+  background-color: #3f5159 !important;
+  box-shadow: 2px 2px 8px #0f5a93 !important;
+}
+body .css-1kgb40s .css-klsenx {
+  display: flex;
+  flex-flow: row;
+  gap: 0.5rem;
+  padding-left: 2rem;
+}
+body .css-1kgb40s .css-463jce {
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+body .css-1kgb40s .css-463jce .css-wpkmsk {
+  height: 44px;
+  width: 44px;
+  background: transparent !important;
+}
+body .css-1kgb40s .css-463jce .css-wpkmsk > img {
+  width: 48px;
+  height: 48px;
 }/*# sourceMappingURL=style.css.map */
