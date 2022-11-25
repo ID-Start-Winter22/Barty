@@ -99,7 +99,7 @@ nlu:
     - Ich nehm den caipirinha
     - den caipirinha
     - den caipi
-    ich nehm den caipi
+    - ich nehm den caipi
 
 - intent: mojito
   examples: | 
