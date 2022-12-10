@@ -3,90 +3,106 @@ version: "3.1"
 nlu:
 - intent: greet
   examples: |
-    - vodka
-    - hey
-    - hello
-    - hi
-    - hello there
-    - good morning
-    - good evening
-    - moin
-    - hey there
-    - let's go
-    - hey dude
-    - goodmorning
-    - goodevening
-    - good afternoon
+    - Hallo
+    - Hi
+    - Moin
+    - Wie gehts
+    - Hello
+    - Servus
+    - Was geht
+    - Guten Morgen
+    - Guten Abend
+    - Whats up
+    - Guten Tag
+    - Hallöchen
+    - Moinsen
+    - Grüß dich
+    - Sehr erfreut
+    - Habediehre
+    - Grüß Gott
+    - Tagchen
 
 - intent: goodbye
   examples: |
-    - cu
-    - good by
-    - cee you later
-    - good night
+    - tschüss
+    - wiedersehen
+    - danke
+    - gute nacht
     - bye
-    - goodbye
-    - have a nice day
-    - see you around
-    - bye bye
-    - see you later
+    - wirsing
+    - tschö
+    - tschau
+    - bye bez
+    - bis dann
+    - Mach's gut
+    - Bis Später
+    - Bis Morgen
+    - Tschüssi
+    - Schönen Tag
+    - Schönen Tag noch
+    - Schönen Abend
+    - Wir sehen uns
+    - Ciau
+    - Machs gut
 
-- intent: affirm
+- intent: drink
   examples: |
-    - yes
-    - y
-    - indeed
-    - of course
-    - that sounds good
-    - correct
+    - Ich brauch n drink
+    - Ich brauch ein drink
+    - Ich brauch einen drink
+    - Ich brauch einen Cocktail
+    - Ich brauch ein Getränk
+    - Ich brauch Alkohol
+    - Ich suche einen Cocktail
+    - Ich bin auf der suche nach Alkohol
+    - Ich bin auf der suche nach einem Cocktail
+    - Ich bin auf der suche nach einem Getränk
+    - Ich will saufen
+    - Ich will Alkohol
+    - Mit einem Getränk
+    - Mit der wahl meines Getränkes
+    - Mit der wahl eines Cocktails
+    - Du kannst mir bei der auswahl eines Cocktails helfen
+    - Du kanns mir helfen einen Cocktail zu finden
+    - Du kannst mit helfen ein passendes getränk zu finden 
+    - Du musst mir bei der auswahl einens getänks helfen
 
-- intent: deny
+- intent: recipe
   examples: |
-    - no
-    - n
-    - never
-    - I don't think so
-    - don't like that
-    - no way
-    - not really
-
-- intent: mood_great
-  examples: |
-    - perfect
-    - great
-    - amazing
-    - feeling like a king
-    - wonderful
-    - I am feeling very good
-    - I am great
-    - I am amazing
-    - I am going to save the world
-    - super stoked
-    - extremely good
-    - so so perfect
-    - so good
-    - so perfect
-
-- intent: mood_unhappy
-  examples: |
-    - my day was horrible
-    - I am sad
-    - I don't feel very well
-    - I am disappointed
-    - super sad
-    - I'm so sad
-    - sad
-    - very sad
-    - unhappy
-    - not good
-    - not very good
-    - extremly sad
-    - so saad
-    - so sad
+    - ein rezept
+    - ein rezept bitte
+    - ich will ein rezept
+    - ich brauch ein rezept
+    - ich bräuchte ein rezept
 
 - intent: bot_challenge
   examples: |
-    - are you a bot?
-    - are you a human?
-    - am I talking to a bot?
-    - am I talking to a human?
+    - bist du ein bot?
+    - bist du ein mensch?
+    - wer bist du?
+    - bist du eine maschiene?
+    - mit wem schreib ich?
+    - mit wem schreibe ich?
+
+- intent: fresh
+  examples: | 
+    - etwas frisches
+    - was erfrischendes
+    - etwas kühles
+    - was frisches
+    - etwas erfrischendes
+    - was kaltes
+
+- intent: caipirinha
+  examples: | 
+    - caipirinha
+    - Ich nehm den caipirinha
+    - den caipirinha
+    - den caipi
+    - ich nehm den caipi
+
+- intent: mojito
+  examples: | 
+    - mojito
+    - Ich nehm den mojito
+    - Den mojito
