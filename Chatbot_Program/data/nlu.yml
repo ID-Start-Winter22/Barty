@@ -106,3 +106,9 @@ nlu:
     - mojito
     - Ich nehm den mojito
     - Den mojito
+
+slots:
+  recipe:
+    type: text
+  taste:
+    type: text
