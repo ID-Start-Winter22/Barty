@@ -1,11 +1,8 @@
 ![BannerPrototypeFinal](https://user-images.githubusercontent.com/117378935/203859367-5ef01f67-8feb-4117-b057-820749030a9e.png)
 
-# Barty
-Thema des Projektmoduls der Studierenden im ersten Semester lautet ‚Designing Voice User Interfaces‘.
-Die Studierenden werden Prototypen bauen, mit denen Menschen per Sprache interagieren.
-Die Ergebnisse der studentischen Arbeiten möchten wir am 10. Dezember 2021 zwischen 15 und 16:30 Uhr Interessierten präsentieren und einladen die Voice Apps (Sprachanwendungen) der Studierenden interaktiv auszuprobieren.
-Zum Wintersemester 2021/22 startet an der Hochschule München und der Studienfakultät MUC.DAI der Studiengang Informatik und Design.
-Zentrales Element des Studiengangs sind Projektmodule, die Bindeglied zwischen Informatik- und Designanteilen des Studiengangs sind.
+# Barty sagt "Hi!" 👋🍹
+Barty ist dein persönlicher Barkeeper, der dir bei der Erweiterung deines Wissens über Cocktails und bei der Erkundung der großen Welt der Cocktails zur Seite steht. Er erfüllt dir fast alle Wünsche und hilft dir dabei, dich für einen Cocktail zu entscheiden. Egal ob du Lust auf einen Mojito oder lieber auf eine Margarita hast. Leider kann Barty die Getränke nicht selbst zubereiten, aber er unterstützt dich dabei, das perfekte Getränk für dich und deine Freunde zuzubereiten. Mit seiner locker-leichten Art und seinem Witz wird er dich beraten und dir dabei helfen, deine Cocktail-Kenntnisse zu erweitern. Lass dich von Barty in die Welt der Cocktails einführen und genieße dein perfekt zubereitetes Getränk!
+
 
 # Storyboard
 ![](https://github.com/ID-Start-Winter22/chat-team-8/blob/12b754be6cfd0d5bdee120709e755d60511c6d8f/User%20Research/Stotyboard.png)
@@ -22,3 +19,7 @@ Zentrales Element des Studiengangs sind Projektmodule, die Bindeglied zwischen I
 | Una Beganovic | una.beganovic@hm.edu |
 
 Wir sind Informatik und Design Studenten im ersten Semester, an der Hochschule München. Im Rahmen des Projektmoduls Start, sollen wir einen lauffähigen Chatbot konzipieren und entwickeln. Hierbei gibt es keine Einschränkungen im Anwendungsbereich des Bots.
+
+**Wiki Seite:** https://github.com/ID-Start-Winter22/Barty/wiki
+
+**Issues:** https://github.com/ID-Start-Winter22/Barty/issues
