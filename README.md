@@ -1,49 +1,24 @@
-# Barty - your personal Barkeeper
+![BannerPrototypeFinal](https://user-images.githubusercontent.com/117378935/203859367-5ef01f67-8feb-4117-b057-820749030a9e.png)
 
-Ein Bot der je nach Bedürfnis/Mood/Geschmack Retzepte für alkoholische und nicht alkoholische Getränke anbietet, und tipps zu Zubereitung gibt.
+#Barty
+Thema des Projektmoduls der Studierenden im ersten Semester lautet ‚Designing Voice User Interfaces‘.
+Die Studierenden werden Prototypen bauen, mit denen Menschen per Sprache interagieren.
+Die Ergebnisse der studentischen Arbeiten möchten wir am 10. Dezember 2021 zwischen 15 und 16:30 Uhr Interessierten präsentieren und einladen die Voice Apps (Sprachanwendungen) der Studierenden interaktiv auszuprobieren.
+Zum Wintersemester 2021/22 startet an der Hochschule München und der Studienfakultät MUC.DAI der Studiengang Informatik und Design.
+Zentrales Element des Studiengangs sind Projektmodule, die Bindeglied zwischen Informatik- und Designanteilen des Studiengangs sind.
 
-Kriterien:
-  - Geschmack Erfrischend, Süß, Sauer, Scharf, Fruchtig, Hauptsache Alkohol, 
-  - Musst du wach bleiben
-  - Hast du einen Shaker
-  - Wie Dicht bist du
-  - Musst du morgen was schaffen
-  
- => Der Perfekte Cocktail für die Aktuelle situation
- 
- # Wo kann man es verwenden
- - Hausparty
- - Onlinegetränkekarte von Bar (Verknüpfen)
- - Bestellautomat Bar
- - Privat
- 
- # Was kann der Chatbot
- - Anfangs Auswahlmenü
- -  Fragen zum gewünschten Geschmack / Stärke / Art
- - Cocktail oder Mocktail
- - Fragen zum vorhandene Inventar / Zutaten 
- - Fragen zum Anlass
- - Einfachheit des Getränks
- - Eventuelles Garnish
- - Betrunkenheits Test
- - Rezepte (Schritt für Schritt Anleitung)
- - Auswahl mit Bildern
- - Vorlieben / Allergien von Benutzern speichern
- - Grafisch den Füllstand darstellen
- - Eigenes Inventar anlegen (Liste / Neue Zutaten hinzufügen)
- - Zufälliges Getränk
- - Nach bestimmten Cocktail fragen
- 
-# Was kann er nicht (Umfang des Chatbots)
-- Neue Rezepte erfinden
-- Rezepte aus dem Internet beziehen
-- Alternative Zutatenvorschläge
+#Storyboard
 
+#Mitglieder
+Katharina Grünwald
+Mert Kafali
+Marco Kosa
+Vlad Panait
 
-# Warum will ich den Chatbot als Nutzer:in verwenden / Hypothese 
-- Einfacher Rezepte finden -> Zeit sparen
-- Neue Sachen ausprobieren -> Horizont erweitern
-- Schnellere Entscheidungen treffen
-- Antwort auf Inventar begrenzt
-- Unterhaltung
+• Ann-Marie Atzkern (atzkern@hm.edu)
+• Berfin Berg (berfin.berg@hm.edu)
+• Ece Sutanrikulu (ece.sutanrikulu@hm.edu)
+• Ilayda Güner (iguener@hm.edu)
+• Kármen Florentina Bulai (bulai@hm.edu)
 
+studieren im ersten Semester Informatik und Design im Wintersemester 2021/22. Im Rahmen des Projektmoduls Start, sollen wir einen lauffähigen Alexa Skill konzipieren und entwickeln. Hierbei gibt es keine Einschränkungen im Anwendungsbereich des Skills. Der entwickelte Skill soll am 10.12.2021 auf dem Hi!A Festival Event Voice-Apps vorgestellt werden.
