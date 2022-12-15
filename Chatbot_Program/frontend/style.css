@@ -1,3 +1,8 @@
+@font-face {
+  font-family: "Raleway";
+  src: url(https://fonts.googleapis.com/css?family=Raleway);
+  font-weight: 500 700;
+}
 body {
   background: linear-gradient(rgba(0, 0, 0, 0.6745098039), rgba(0, 0, 0, 0.6745098039)), url("./assets/pexels-chris-f-1283219.jpg");
   background-size: cover;
@@ -8,6 +13,27 @@ body {
   margin: 0 !important;
   overflow: hidden;
   display: block;
+}
+body p {
+  font-family: "Raleway";
+  font-size: 1.25rem;
+  margin: 0;
+  font-weight: 500;
+  color: #E3DDDD;
+}
+body h3 {
+  font-family: "Raleway";
+  font-size: 2rem;
+  margin: 0;
+  font-weight: 700;
+  color: #E3DDDD;
+}
+body h4 {
+  font-family: "Raleway";
+  font-size: 1.5rem;
+  margin: 0;
+  font-weight: 700;
+  color: #E3DDDD;
 }
 body .chat-container {
   position: absolute;
@@ -44,7 +70,7 @@ body .chat-container .scroll-container {
   width: calc(100% - 2rem);
   flex-grow: 1;
   overflow: hidden auto;
-  padding: 1rem;
+  padding: 1rem 1rem 10vh 1rem !important;
 }
 body .chat-container .scroll-container .bot-message-row {
   width: 100%;
@@ -86,77 +112,70 @@ body .chat-container .scroll-container .user-message-row .message-container {
   padding: 0.5rem;
   box-shadow: 4px 4px 16px rgba(0, 0, 0, 0.2509803922);
 }
-body .chat-container .scroll-container .message-text {
-  padding: 0;
-  margin: 0;
-  font-size: 1.5rem;
-}
 body .chat-container .scroll-container .recipe-container {
   width: 100%;
-  height: -webkit-fit-content;
-  height: -moz-fit-content;
-  height: fit-content;
-  margin-bottom: 1rem;
-  display: inline-block;
-}
-body .chat-container .scroll-container .recipe-container .recipe-button {
-  color: #E3DDDD;
-  background: #34434A;
-  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5019607843);
+  max-height: 162px;
+  display: block;
+  padding: 0;
+  background: #211D1C;
+  box-shadow: 4px 4px 16px rgba(0, 0, 0, 0.2509803922);
   border-radius: 1rem;
+  margin-bottom: 1rem;
+  transition: all 333ms ease-out;
+  overflow: hidden !important;
+}
+body .chat-container .scroll-container .recipe-container .recipe-header {
+  width: 100%;
+  display: inline-flex;
+  gap: 2rem;
+  align-items: center;
   padding: 0.5rem;
-  margin: 0 0.25rem;
-  width: calc(33% - 0.75rem);
+  background-color: #34434A;
   border: none;
-  transition: box-shadow 150ms, background-color 150ms, width 300ms, margin 300ms, padding 300ms;
-  display: inline-block;
-  overflow: hidden;
+  text-align: start;
+  border-radius: 1rem;
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5019607843);
+  transition: box-shadow 150ms;
 }
-body .chat-container .scroll-container .recipe-container .recipe-button:hover {
+body .chat-container .scroll-container .recipe-container .recipe-header:hover {
   box-shadow: 4px 4px 16px #0f5a93;
-  background-color: #34434A;
 }
-body .chat-container .scroll-container .recipe-container .recipe-button:active {
+body .chat-container .scroll-container .recipe-container .recipe-header:active {
   box-shadow: 2px 2px 8px #0f5a93;
-  background-color: #34434A;
 }
-body .chat-container .scroll-container .recipe-container .recipe-button .recipe-button-title {
-  width: 100%;
-  height: -webkit-fit-content;
-  height: -moz-fit-content;
-  height: fit-content;
-  display: flex;
-  flex-flow: column;
-  gap: 0.5rem;
-  transition-delay: flex-flow 300ms;
+body .chat-container .scroll-container .recipe-container .recipe-header:disabled {
+  box-shadow: none;
+  background-color: transparent;
 }
-body .chat-container .scroll-container .recipe-container .recipe-button .recipe-button-title .recipe-button-image {
-  width: 100%;
+body .chat-container .scroll-container .recipe-container .recipe-header .recipe-img {
+  flex-basis: 25% !important;
   aspect-ratio: 1/1;
   border-radius: 0.5rem;
-  transition: width 300ms;
+  max-width: calc(25% - 0.25rem);
 }
-body .chat-container .scroll-container .recipe-container .recipe-button .recipe-button-title .recipe-title {
-  font-size: 1.5rem;
-  margin: 0.5rem 0;
+body .chat-container .scroll-container .recipe-container .recipe-detail-body {
+  max-height: 0;
+  padding: 0 1rem;
+  overflow: hidden;
 }
-body .chat-container .scroll-container .recipe-container:has(.recipe-button[data-active=true]) .recipe-button {
-  margin: 0 0 !important;
+body .chat-container .scroll-container .recipe-container .recipe-detail-body p {
+  margin-bottom: 0.5rem;
 }
-body .chat-container .scroll-container .recipe-container:has(.recipe-button[data-active=true]) .recipe-button[data-active=false] {
-  width: 0% !important;
+body .chat-container .scroll-container .recipe-container:has(.recipe-header[data-selected=true]:disabled) {
+  overflow: hidden auto !important;
+  max-height: 512px;
+  height: 512px;
+}
+body .chat-container .scroll-container .recipe-container:has(.recipe-header[data-selected=true]:disabled) .recipe-detail-body {
+  max-height: 100% !important;
+  padding: 1rem !important;
+}
+body .chat-container .scroll-container .recipe-container:has(.recipe-header:not([data-selected=true]):disabled) {
+  margin: 0 !important;
   padding: 0 !important;
+  max-height: 0;
 }
-body .chat-container .scroll-container .recipe-container:has(.recipe-button[data-active=true]) .recipe-button[data-active=true] {
-  width: calc(100% - 1rem) !important;
-}
-body .chat-container .scroll-container .recipe-container:has(.recipe-button[data-active=true]) .recipe-button[data-active=true] .recipe-button-title {
-  flex-flow: row !important;
-}
-body .chat-container .scroll-container .recipe-container:has(.recipe-button[data-active=true]) .recipe-button[data-active=true] .recipe-button-title .recipe-button-image {
-  width: 128px !important;
-}
-body .chat-container .send-form {
+body .send-form {
   flex-grow: 0;
   width: calc(100% - 2rem);
   display: flex;
@@ -164,7 +183,7 @@ body .chat-container .send-form {
   gap: 1rem;
   padding: 1rem;
 }
-body .chat-container .send-form .message-input {
+body .send-form .message-input {
   flex-grow: 1;
   min-width: 8rem;
   height: 100%;
@@ -177,20 +196,20 @@ body .chat-container .send-form .message-input {
   font-size: 1.5rem;
   transition: all 150ms;
 }
-body .chat-container .send-form .message-input:hover {
+body .send-form .message-input:hover {
   box-shadow: 4px 4px 16px #0f5a93;
   background-color: #34434A;
 }
-body .chat-container .send-form .message-input:active {
+body .send-form .message-input:active {
   box-shadow: 2px 2px 8px #0f5a93;
   background-color: #34434A;
 }
-body .chat-container .send-form .message-input:focus-visible {
+body .send-form .message-input:focus-visible {
   box-shadow: 2px 2px 8px #0f5a93;
   background-color: #34434A;
   outline: none !important;
 }
-body .chat-container .send-form .send-button {
+body .send-form .send-button {
   aspect-ratio: 1/1;
   padding: 0.5rem;
   background: #34434A;
@@ -200,15 +219,15 @@ body .chat-container .send-form .send-button {
   will-change: box-shadow, background-color;
   transition: all 150ms;
 }
-body .chat-container .send-form .send-button:hover {
+body .send-form .send-button:hover {
   box-shadow: 4px 4px 16px #0f5a93;
   background-color: #34434A;
 }
-body .chat-container .send-form .send-button:active {
+body .send-form .send-button:active {
   box-shadow: 2px 2px 8px #0f5a93;
   background-color: #34434A;
 }
-body .chat-container .send-form .send-button .send-button-image {
+body .send-form .send-button .send-button-image {
   width: 2rem;
   height: 2rem;
   padding: 0;

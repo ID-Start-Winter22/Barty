@@ -108,6 +108,8 @@ nlu:
     - Den mojito
 
 slots:
+  name:
+    type: text
   recipe:
     type: text
   taste:
