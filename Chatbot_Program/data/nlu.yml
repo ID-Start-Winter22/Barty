@@ -45,8 +45,13 @@ nlu:
     - Ciau
     - Machs gut
 
-- intent: drink
+- intent: recipe
   examples: |
+    - ein rezept
+    - ein rezept bitte
+    - ich will ein rezept
+    - ich brauch ein rezept
+    - ich bräuchte ein rezept
     - Ich brauch n drink
     - Ich brauch ein drink
     - Ich brauch einen drink
@@ -67,13 +72,274 @@ nlu:
     - Du kannst mit helfen ein passendes getränk zu finden 
     - Du musst mir bei der auswahl einens getänks helfen
 
-- intent: recipe
+- intent: name
   examples: |
-    - ein rezept
-    - ein rezept bitte
-    - ich will ein rezept
-    - ich brauch ein rezept
-    - ich bräuchte ein rezept
+  - Ich heiße [Gudrun](username)
+  - Ich bin [Tina](username)
+  - [Una](username)
+  - mein Name ist [Julia](username)
+  - [Tatjana](username) ist mein Name
+  - Die entzückende Person ist [Maria](username)
+  - Ich bin [Lina](username)
+
+- intent: random_cocktail
+  examples: |
+  - Spuck mir ein zufälliges Getränk aus
+  - Gib mir ein zufälliges Getränk
+  - Mach mir ein zufälliges Getrönk
+  - Ich will ein zufälliges Getränk
+  - Zufälliges Getränk
+  - Mach mir eine zufällige Mische
+  - Ich will eine zufällifge Mische
+  - Zufäällige Mische
+  - Zufälliger Cocktail
+  - Vertrau mir Brudi Mische
+  - Gib mir eine zufällige Mische
+  - Eine Zufällige Mische, bitte
+  - Ein zufälligen Cocktail, bitte
+  - Ich vertrau dir
+  - Ich vertraue dir mal
+
+- intent: yess
+  examples: |
+  - ja
+  - sicher
+  - natürlich
+  - jawohl
+  - aber ja
+  - selbstverständlich
+  - gewiss
+  - freilich 
+  - bestimmt
+  - auf jeden Fall
+  - jedenfalls
+  - gut
+  - einverstanden
+  - okay
+  - in Ordnung
+  - geht in Ordnung
+  - klar
+  - ist geritzt
+  - abgemacht
+  - gebongt
+  - ok
+  - klaro
+  - yes
+
+- intent: cocktail_by_name
+  examples: |
+  - Gib mir einen [Mojito](Cocktailname)
+  - Ich will das Rezept für einen [Pornstar Martini](Cocktailname)
+  - Ich will einen [Martini](Cocktailname)
+  - Einen [Cubra Libre](Cocktailname)
+  - Ich hätte gerne einen [Touchdown](Cocktailname)
+  - Ich hätte gerne das Rezept für einen [White Russian](Cocktailname)
+  - Spuck mir das Rezpt für einen [Moscow Mule](Cocktailname) raus
+  - Ich möchte einen [Bloody Mary](Cocktailname) trinken
+  - Ich möchte einen [Zombie](Cocktailname) haben
+  - Darf ich das Rezept für einen [Bloody Maria](Cocktailname) haben?
+  - Ein [Liquid Cocain](Cocktailname), bitte
+
+
+- intent: cocktail_name
+  examples: |
+
+- intent: recommendation
+  examples: |
+  - Cocktail nach meinen Wünschen
+  - Cocktail für meine Wünsche
+  - Cocktail für mich und meine Wünsche
+  - Mach mir ein Cocktail mit meinen Bedürfnissen
+  - Gib mir ein Cocktailnach meine Bedürfnissen
+  - Empfehle mir ein Cocktail
+  - Befrage mich
+  - Ich will ein Cocktail nach meinen Wünschen
+  - Ich brauche eine COktail Empfehlung
+  - Kannst dzu mir eine Cocktail Empfehlung geben
+  - Gib mir eine Cocktail Empfehlung
+  - Gib mir ein Cocktail nach meinen wünschen
+  - Empfehl mir was
+  - Empfehlung
+  - Wunsch Cocktail
+  - Cocktail nach Bedürfnissen
+
+- intent: without
+  examples: |
+  - Ohne
+  - Kein
+  - Kein Alkohol
+  - Igitt
+  - Ich will kein Alkohol
+  - Ungern Alkohol
+  - Gib mir ein Cocktail ohne Alkohol
+  - Nichts
+  - Ohne Alkohol
+  - Ich hasse Alkohol
+  - Ich bin Fahrer
+  - Nö
+  - Ich hätte gerne einen Cocktail ohne Alkohol
+  - Ich trinke nicht
+  - Ich mag kein Alkohol
+  - Fahrer
+
+
+- intent: with
+  examples: |
+  - Saufen
+  - Alkohol
+  - Ich will mit Alkohol
+  - Viel Alkohol
+  - Immer doch
+  - Je mehr desto besser
+  - Gib mir mit alkohol
+  - Mit natürlich 
+  - Ich hätte gerne einen Cocktail mit Alkohol
+  - Ich will mit Alkohol
+  - Gib mir es mit Alkohol
+  - Ich saufe gerne
+  - Ich trinke nichts ohne Alkohol  
+
+- intent: nospecification
+  examples: |
+  - Will ich dir nicht sagen
+  - Keine Ahnung
+  - Weiß nicht
+  - K.A.
+  - Mir egal
+  - Schwere Entscheidung
+  - Ich halte das frei
+  - Kann mich nicht entscheiden
+  - Habe kein Plan
+  - Es ist mir egal
+  - Schwer zusagen
+  - Bin mir unsicher
+  - Weiß ich nicht
+  - Ich habe keine ahnung
+  - Ist mir wurscht
+
+- intent: fruity
+  examples: |
+  - Fruchtig
+  - Etwas fruchtiges
+  - Ich will einen fruchtigen Cocktail
+  - Ich mag etwas fruchtiges
+  - Ich hätte gerne etwas fruchtiges
+  - Gib mir etwas fruchtiges
+  - Fruchtiger Cocktail
+  - Fruchtig lecker
+  - Spuck was fruchtiges raus
+  - Ich liebe etwas fruchtiges
+  - Heute mal was fruchtiges
+  - Wie wäre es mit etwas fruchtigem
+  - Lass was fruchtiges nehmen
+
+- intent: sweet
+  examples: |
+  - Süßes
+  - süß
+  - Etwas süßes
+  - Ich will einen süßen Cocktail
+  - Ich mag etwas süßes
+  - Ich hätte gerne etwas süßes
+  - Gib mir etwas süßes
+  - süßer Cocktail
+  - süß lecker
+  - Spuck was süsses aus
+  - Ich liebe etwas süsses
+  - Heute mal was süßes
+  - Wie wäre es mit etwas süßem
+  - Lass was süsses nehmen
+
+- intent: sour
+  examples: |
+  - saur
+  - saures
+  - Etwas saures
+  - Ich will einen sauren Cocktail
+  - Ich mag etwas saures
+  - Ich hätte gerne etwas saures
+  - Gib mir etwas saures
+  - saurer Cocktail
+  - saur lecker
+  - Spuck was saures aus
+  - Ich liebe etwas saures
+  - Heute mal was saures
+  - Wie wäre es mit etwas saurem
+  - Lass was saures nehmen
+  
+
+- intent: bitter
+  examples: |
+  - bitter
+  - Etwas bitteres
+  - Ich will einen bitteren Cocktail
+  - Ich mag etwas bitteres
+  - Ich hätte gerne etwas bitteres
+  - Gib mir etwas bitteres
+  - bitterer Cocktail
+  - bitter lecker
+  - Spuck was bitteres aus
+  - Ich liebe etwas bitteres
+  - Heute mal was bitteres
+  - Wie wäre es mit etwas bitterem
+  - Lass was bitteres nehmen
+
+- intent: refreshing
+  examples: |
+  - erfrischend
+  - Ich will einen erfrischenden Cocktail
+  - Ich mag etwas erfrischendes
+  - Ich hätte gerne etwas erfrischendes
+  - Gib mir etwas erfrischendes
+  - erfrischender Cocktail
+  - erfrischend lecker
+  - Spuck was erfrischendes aus
+  - Ich liebe etwas erfrischendes
+  - Heute mal was erfrischendes
+  - Wie wäre es mit etwas erfrischendem
+  - Lass was erfrischendes nehmen
+  - etwas frisches
+  - was erfrischendes
+  - etwas kühles
+  - was frisches
+  - etwas erfrischendes
+  - was kaltes
+
+- intent: creamy
+  examples: |
+  - cremig
+  - Etwas cremiges
+  - Ich will einen cremigen Cocktail
+  - Ich mag etwas cremiges
+  - Ich hätte gerne etwas cremiges
+  - Gib mir etwas cremiges
+  - cremiger Cocktail
+  - cremig lecker
+  - Spuck was cremiges aus
+  - Ich liebe etwas cremiges
+  - Heute mal was cremiges
+  - Wie wäre es mit etwas cremigem
+  - Lass was cremiges nehmen
+
+- intent: spicy
+  examples: |
+  - würzig
+  - Etwas würziges
+  - Ich will einen würziges Cocktail
+  - Ich mag etwas würziges
+  - Ich hätte gerne etwas würziges
+  - Gib mir etwas würziges
+  - würziger Cocktail
+  - würzig lecker
+  - Spuck was würziges aus
+  - Ich liebe etwas würziges
+  - Heute mal was würziges
+  - Wie wäre es mit etwas würzigem
+  - Lass was würziges nehmen
+
+- intent: ingredients #help
+  examples: |
+
 
 - intent: bot_challenge
   examples: |
@@ -84,31 +350,31 @@ nlu:
     - mit wem schreib ich?
     - mit wem schreibe ich?
 
-- intent: fresh
-  examples: | 
-    - etwas frisches
-    - was erfrischendes
-    - etwas kühles
-    - was frisches
-    - etwas erfrischendes
-    - was kaltes
+# - intent: fresh
+#   examples: | 
+    # - etwas frisches
+    # - was erfrischendes
+    # - etwas kühles
+    # - was frisches
+    # - etwas erfrischendes
+    # - was kaltes
 
-- intent: caipirinha
-  examples: | 
-    - caipirinha
-    - Ich nehm den caipirinha
-    - den caipirinha
-    - den caipi
-    - ich nehm den caipi
+# - intent: caipirinha
+#   examples: | 
+#     - caipirinha
+#     - Ich nehm den caipirinha
+#     - den caipirinha
+#     - den caipi
+#     - ich nehm den caipi
 
-- intent: mojito
-  examples: | 
-    - mojito
-    - Ich nehm den mojito
-    - Den mojito
+# - intent: mojito
+#   examples: | 
+#     - mojito
+#     - Ich nehm den mojito
+#     - Den mojito
 
-slots:
-  recipe:
-    type: text
-  taste:
-    type: text
+# slots:
+#   recipe:
+#     type: text
+#   taste:
+#     type: text
