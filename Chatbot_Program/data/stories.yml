@@ -29,28 +29,955 @@ stories:
 #   - intent: deny
 #   - action: utter_goodbye
 
-- story: recipe-caipirinha
-  steps:
-  - intent: greet
-  - action: utter_greet
-  - intent: drink
-  - action: utter_choose_help
-  - intent: recipe
-  - action: utter_taste
-  - intent: fresh
-  - action: utter_propose_fresh_recipe
-  - intent: caipirinha
-  - action: utter_caipirinha_recipe
+# - story: recipe-caipirinha
+#   steps:
+#   - intent: greet
+#   - action: utter_greet
+#   - intent: drink
+#   - action: utter_choose_help
+#   - intent: recipe
+#   - action: utter_taste
+#   - intent: fresh
+#   - action: utter_propose_fresh_recipe
+#   - intent: caipirinha
+#   - action: utter_caipirinha_recipe
 
-- story: recipe-mojito
+# - story: recipe-mojito
+#   steps:
+#   - intent: greet
+#   - action: utter_greet
+#   - intent: drink
+#   - action: utter_choose_help
+#   - intent: recipe
+#   - action: utter_taste
+#   - intent: fresh
+#   - action: utter_propose_fresh_recipe
+#   - intent: mojito
+#   - action: utter_mojito_recipe
+
+###BEGINNING###
+- story: random-recipe
   steps:
   - intent: greet
   - action: utter_greet
-  - intent: drink
+  - intent: name
   - action: utter_choose_help
   - intent: recipe
-  - action: utter_taste
-  - intent: fresh
-  - action: utter_propose_fresh_recipe
-  - intent: mojito
-  - action: utter_mojito_recipe
+  - action: utter_give_options
+  - checkpoint: beggining_checkpoint
+
+###RANDOM COCKTAIL PATH###
+- story: random-recipe
+  steps:
+  - checkpoint: beggining_checkpoint
+  - intent: random_cocktail
+  - action: utter_ask_for_affirmation
+  - intent: yess
+  - action: utter_random_recipe
+  - action: action_random_recipe
+  - action: utter_goodbye
+
+###COCKTAIL BY NAME PATH###
+- story: specific-cocktail-by-name
+  steps:
+  - checkpoint: beggining_checkpoint
+  - intent: cocktail_by_name
+  - action: utter_get_cocktail_name
+  - intent: cocktail_name
+  - action: utter_recipe_by_name
+  - action: action_store_cocktailname
+  - intent: utter_goodbye
+
+###BEGINN OF THE RECOMMENDATION PATH###
+- story: recommendation-cocktail-without-fruity-yes-steps:
+  steps:
+  - checkpoint: beggining_checkpoint
+  - intent: recommendation
+  - action: utter_ask_with_without_alk
+  - intent: without
+  - action: action_store_alkohol
+  - action: utter_without_alk
+  - action: utter_ask_taste
+  - intent: fruity
+  - action: action_store_taste
+  - action: utter_fruity
+  - action: utter_ask_for_ingredients
+  - intent: yess
+  - action: utter_ingredients_yes
+  - intent: ingredients
+  - action: action_store_ingredients
+  - action: utter_recipe
+  - action: action_recommend_recipe
+  - action: utter_goodbye
+- story: recommendation-cocktail-without-sweet-yes-steps:
+  steps:
+  - checkpoint: beggining_checkpoint
+  - intent: recommendation
+  - action: utter_ask_with_without_alk
+  - intent: without
+  - action: action_store_alkohol
+  - action: utter_without_alk
+  - action: utter_ask_taste
+  - intent: sweet
+  - action: action_store_taste
+  - action: utter_sweet
+  - action: utter_ask_for_ingredients
+  - intent: yess
+  - action: utter_ingredients_yes
+  - intent: ingredients
+  - action: action_store_ingredients
+  - action: utter_recipe
+  - action: action_recommend_recipe
+  - action: utter_goodbye
+
+- story: recommendation-cocktail-without-sour-yes-steps:
+  steps:
+  - checkpoint: beggining_checkpoint
+  - intent: recommendation
+  - action: utter_ask_with_without_alk
+  - intent: without
+  - action: action_store_alkohol
+  - action: utter_without_alk
+  - action: utter_ask_taste
+  - intent: sour
+  - action: action_store_taste
+  - action: utter_sour
+  - action: utter_ask_for_ingredients
+  - intent: yess
+  - action: utter_ingredients_yes
+  - intent: ingredients
+  - action: action_store_ingredients
+  - action: utter_recipe
+  - action: action_recommend_recipe
+  - action: utter_goodbye
+- story: recommendation-cocktail-without-bitter-yes-steps:
+  steps:
+  - checkpoint: beggining_checkpoint
+  - intent: recommendation
+  - action: utter_ask_with_without_alk
+  - intent: without
+  - action: action_store_alkohol
+  - action: utter_without_alk
+  - action: utter_ask_taste
+  - intent: bitter
+  - action: action_store_taste
+  - action: utter_bitter
+  - action: utter_ask_for_ingredients
+  - intent: yess
+  - action: utter_ingredients_yes
+  - intent: ingredients
+  - action: action_store_ingredients
+  - action: utter_recipe
+  - action: action_recommend_recipe
+  - action: utter_goodbye
+- story: recommendation-cocktail-without-refreshing-yes-steps:
+  steps:
+  - checkpoint: beggining_checkpoint
+  - intent: recommendation
+  - action: utter_ask_with_without_alk
+  - intent: without
+  - action: action_store_alkohol
+  - action: utter_without_alk
+  - action: utter_ask_taste
+  - intent: refreshing
+  - action: action_store_taste
+  - action: utter_refreshing
+  - action: utter_ask_for_ingredients
+  - intent: yess
+  - action: utter_ingredients_yes
+  - intent: ingredients
+  - action: action_store_ingredients
+  - action: utter_recipe
+  - action: action_recommend_recipe
+  - action: utter_goodbye
+- story: recommendation-cocktail-without-creamy-yes-steps:
+  steps:
+  - checkpoint: beggining_checkpoint
+  - intent: recommendation
+  - action: utter_ask_with_without_alk
+  - intent: without
+  - action: action_store_alkohol
+  - action: utter_without_alk
+  - action: utter_ask_taste
+  - intent: creamy
+  - action: action_store_taste
+  - action: utter_creamy
+  - action: utter_ask_for_ingredients
+  - intent: yess
+  - action: utter_ingredients_yes
+  - intent: ingredients
+  - action: action_store_ingredients
+  - action: utter_recipe
+  - action: action_recommend_recipe
+  - action: utter_goodbye
+- story: recommendation-cocktail-without-spicy-yes-steps:
+  steps:
+  - checkpoint: beggining_checkpoint
+  - intent: recommendation
+  - action: utter_ask_with_without_alk
+  - intent: without
+  - action: action_store_alkohol
+  - action: utter_without_alk
+  - action: utter_ask_taste
+  - intent: spicy
+  - action: action_store_taste
+  - action: utter_spicy
+  - action: utter_ask_for_ingredients
+  - intent: yess
+  - action: utter_ingredients_yes
+  - intent: ingredients
+  - action: action_store_ingredients
+  - action: utter_recipe
+  - action: action_recommend_recipe
+  - action: utter_goodbye
+- story: recommendation-cocktail-without-nospecification-yes-steps: #8 
+  steps:
+  - checkpoint: beggining_checkpoint
+  - intent: recommendation
+  - action: utter_ask_with_without_alk
+  - intent: without
+  - action: action_store_alkohol
+  - action: utter_without_alk
+  - action: utter_ask_taste
+  - intent: nospecification
+  - action: utter_nospecification
+  - action: utter_ask_for_ingredients
+  - intent: yess
+  - action: utter_ingredients_yes
+  - intent: ingredients
+  - action: action_store_ingredients
+  - action: utter_recipe
+  - action: action_recommend_recipe
+  - action: utter_goodbye
+- story: recommendation-cocktail-without-fruity-no-steps:
+  steps:
+  - checkpoint: beggining_checkpoint
+  - intent: recommendation
+  - action: utter_ask_with_without_alk
+  - intent: without
+  - action: action_store_alkohol
+  - action: utter_without_alk
+  - action: utter_ask_taste
+  - intent: fruity
+  - action: action_store_taste
+  - action: utter_fruity
+  - action: utter_ask_for_ingredients
+  - intent: nospecification
+  - action: utter_ingredients_no
+  - action: utter_recipe
+  - action: action_recommend_recipe
+  - action: utter_goodbye
+- story: recommendation-cocktail-without-sweet-no-steps:
+  steps:
+  - checkpoint: beggining_checkpoint
+  - intent: recommendation
+  - action: utter_ask_with_without_alk
+  - intent: without
+  - action: action_store_alkohol
+  - action: utter_without_alk
+  - action: utter_ask_taste
+  - intent: sweet
+  - action: action_store_taste
+  - action: utter_sweet
+  - action: utter_ask_for_ingredients
+  - intent: nospecification
+  - action: utter_ingredients_no
+  - action: utter_recipe
+  - action: action_recommend_recipe
+  - action: utter_goodbye
+
+- story: recommendation-cocktail-without-sour-no-steps:
+  steps:
+  - checkpoint: beggining_checkpoint
+  - intent: recommendation
+  - action: utter_ask_with_without_alk
+  - intent: without
+  - action: action_store_alkohol
+  - action: utter_without_alk
+  - action: utter_ask_taste
+  - intent: sour
+  - action: action_store_taste
+  - action: utter_sour
+  - action: utter_ask_for_ingredients
+  - intent: nospecification
+  - action: utter_ingredients_no
+  - action: utter_recipe
+  - action: action_recommend_recipe
+  - action: utter_goodbye
+- story: recommendation-cocktail-without-bitter-no-steps:
+  steps:
+  - checkpoint: beggining_checkpoint
+  - intent: recommendation
+  - action: utter_ask_with_without_alk
+  - intent: without
+  - action: action_store_alkohol
+  - action: utter_without_alk
+  - action: utter_ask_taste
+  - intent: bitter
+  - action: action_store_taste
+  - action: utter_bitter
+  - action: utter_ask_for_ingredients
+  - intent: nospecification
+  - action: utter_ingredients_no
+  - action: utter_recipe
+  - action: action_recommend_recipe
+  - action: utter_goodbye
+- story: recommendation-cocktail-without-refreshing-no-steps:
+  steps:
+  - checkpoint: beggining_checkpoint
+  - intent: recommendation
+  - action: utter_ask_with_without_alk
+  - intent: without
+  - action: action_store_alkohol
+  - action: utter_without_alk
+  - action: utter_ask_taste
+  - intent: refreshing
+  - action: action_store_taste
+  - action: utter_refreshing
+  - action: utter_ask_for_ingredients
+  - intent: nospecification
+  - action: utter_ingredients_no
+  - action: utter_recipe
+  - action: action_recommend_recipe
+  - action: utter_goodbye
+- story: recommendation-cocktail-without-creamy-no-steps:
+  steps:
+  - checkpoint: beggining_checkpoint
+  - intent: recommendation
+  - action: utter_ask_with_without_alk
+  - intent: without
+  - action: action_store_alkohol
+  - action: utter_without_alk
+  - action: utter_ask_taste
+  - intent: creamy
+  - action: action_store_taste
+  - action: utter_creamy
+  - action: utter_ask_for_ingredients
+  - intent: nospecification
+  - action: utter_ingredients_no
+  - action: utter_recipe
+  - action: action_recommend_recipe
+  - action: utter_goodbye
+- story: recommendation-cocktail-without-spicy-no-steps:
+  steps:
+  - checkpoint: beggining_checkpoint
+  - intent: recommendation
+  - action: utter_ask_with_without_alk
+  - intent: without
+  - action: action_store_alkohol
+  - action: utter_without_alk
+  - action: utter_ask_taste
+  - intent: spicy
+  - action: action_store_taste
+  - action: utter_spicy
+  - action: utter_ask_for_ingredients
+  - intent: nospecification
+  - action: utter_ingredients_no
+  - action: utter_recipe
+  - action: action_recommend_recipe
+  - action: utter_goodbye
+- story: recommendation-cocktail-without-nospecification-no-steps:
+  steps:
+  - checkpoint: beggining_checkpoint
+  - intent: recommendation
+  - action: utter_ask_with_without_alk
+  - intent: without
+  - action: action_store_alkohol
+  - action: utter_without_alk
+  - action: utter_ask_taste
+  - intent: nospecification
+  - action: utter_nospecification
+  - action: utter_ask_for_ingredients
+  - intent: nospecification
+  - action: utter_ingredients_no
+  - action: utter_recipe
+  - action: action_recommend_recipe
+  - action: utter_goodbye
+- story: recommendation-cocktail-with-fruity-yes-steps: #8 #16
+  steps:
+  - checkpoint: beggining_checkpoint
+  - intent: recommendation
+  - action: utter_ask_with_without_alk
+  - intent: with
+  - action: action_store_alkohol
+  - action: utter_with_alk
+  - action: utter_ask_taste
+  - intent: fruity
+  - action: action_store_taste
+  - action: utter_fruity
+  - action: utter_ask_for_ingredients
+  - intent: yess
+  - action: utter_ingredients_yes
+  - intent: ingredients
+  - action: action_store_ingredients
+  - action: utter_recipe
+  - action: action_recommend_recipe
+  - action: utter_goodbye
+- story: recommendation-cocktail-with-sweet-yes-steps:
+  steps:
+  - checkpoint: beggining_checkpoint
+  - intent: recommendation
+  - action: utter_ask_with_without_alk
+  - intent: with
+  - action: action_store_alkohol
+  - action: utter_with_alk
+  - action: utter_ask_taste
+  - intent: sweet
+  - action: action_store_taste
+  - action: utter_sweet
+  - action: utter_ask_for_ingredients
+  - intent: yess
+  - action: utter_ingredients_yes
+  - intent: ingredients
+  - action: action_store_ingredients
+  - action: utter_recipe
+  - action: action_recommend_recipe
+  - action: utter_goodbye
+- story: recommendation-cocktail-with-sour-yes-steps:
+  steps:
+  - checkpoint: beggining_checkpoint
+  - intent: recommendation
+  - action: utter_ask_with_without_alk
+  - intent: with
+  - action: action_store_alkohol
+  - action: utter_with_alk
+  - action: utter_ask_taste
+  - intent: sour
+  - action: action_store_taste
+  - action: utter_sour
+  - action: utter_ask_for_ingredients
+  - intent: yess
+  - action: utter_ingredients_yes
+  - intent: ingredients
+  - action: action_store_ingredients
+  - action: utter_recipe
+  - action: action_recommend_recipe
+  - action: utter_goodbye
+- story: recommendation-cocktail-with-bitter-yes-steps:
+  steps:
+  - checkpoint: beggining_checkpoint
+  - intent: recommendation
+  - action: utter_ask_with_without_alk
+  - intent: with
+  - action: action_store_alkohol
+  - action: utter_with_alk
+  - action: utter_ask_taste
+  - intent: bitter
+  - action: action_store_taste
+  - action: utter_bitter
+  - action: utter_ask_for_ingredients
+  - intent: yess
+  - action: utter_ingredients_yes
+  - intent: ingredients
+  - action: action_store_ingredients
+  - action: utter_recipe
+  - action: action_recommend_recipe
+  - action: utter_goodbye
+- story: recommendation-cocktail-with-refreshing-yes-steps:
+  steps:
+  - checkpoint: beggining_checkpoint
+  - intent: recommendation
+  - action: utter_ask_with_without_alk
+  - intent: with
+  - action: action_store_alkohol
+  - action: utter_with_alk
+  - action: utter_ask_taste
+  - intent: refreshing
+  - action: action_store_taste
+  - action: utter_refreshing
+  - action: utter_ask_for_ingredients
+  - intent: yess
+  - action: utter_ingredients_yes
+  - intent: ingredients
+  - action: action_store_ingredients
+  - action: utter_recipe
+  - action: action_recommend_recipe
+  - action: utter_goodbye
+- story: recommendation-cocktail-with-creamy-yes-steps:
+  steps:
+  - checkpoint: beggining_checkpoint
+  - intent: recommendation
+  - action: utter_ask_with_without_alk
+  - intent: with
+  - action: action_store_alkohol
+  - action: utter_with_alk
+  - action: utter_ask_taste
+  - intent: creamy
+  - action: action_store_taste
+  - action: utter_creamy
+  - action: utter_ask_for_ingredients
+  - intent: yess
+  - action: utter_ingredients_yes
+  - intent: ingredients
+  - action: action_store_ingredients
+  - action: utter_recipe
+  - action: action_recommend_recipe
+  - action: utter_goodbye
+- story: recommendation-cocktail-with-spicy-yes-steps:
+  steps:
+  - checkpoint: beggining_checkpoint
+  - intent: recommendation
+  - action: utter_ask_with_without_alk
+  - intent: with
+  - action: action_store_alkohol
+  - action: utter_with_alk
+  - action: utter_ask_taste
+  - intent: spicy
+  - action: action_store_taste
+  - action: utter_spicy
+  - action: utter_ask_for_ingredients
+  - intent: yess
+  - action: utter_ingredients_yes
+  - intent: ingredients
+  - action: action_store_ingredients
+  - action: utter_recipe
+  - action: action_recommend_recipe
+  - action: utter_goodbye
+- story: recommendation-cocktail-with-nospecification-yes-steps: #8 #24
+  steps:
+  - checkpoint: beggining_checkpoint
+  - intent: recommendation
+  - action: utter_ask_with_without_alk
+  - intent: with
+  - action: action_store_alkohol
+  - action: utter_with_alk
+  - action: utter_ask_taste
+  - intent: nospecification
+  - action: utter_nospecification
+  - action: utter_ask_for_ingredients
+  - intent: yess
+  - action: utter_ingredients_yes
+  - intent: ingredients
+  - action: action_store_ingredients
+  - action: utter_recipe
+  - action: action_recommend_recipe
+  - action: utter_goodbye
+- story: recommendation-cocktail-with-fruity-no-steps:
+  steps:
+  - checkpoint: beggining_checkpoint
+  - intent: recommendation
+  - action: utter_ask_with_without_alk
+  - intent: with
+  - action: action_store_alkohol
+  - action: utter_with_alk
+  - action: utter_ask_taste
+  - intent: fruity
+  - action: action_store_taste
+  - action: utter_fruity
+  - action: utter_ask_for_ingredients
+  - intent: nospecification
+  - action: utter_ingredients_no
+  - action: utter_recipe
+  - action: action_recommend_recipe
+  - action: utter_goodbye
+- story: recommendation-cocktail-with-sweet-no-steps:
+  steps:
+  - checkpoint: beggining_checkpoint
+  - intent: recommendation
+  - action: utter_ask_with_without_alk
+  - intent: with
+  - action: action_store_alkohol
+  - action: utter_with_alk
+  - action: utter_ask_taste
+  - intent: sweet
+  - action: action_store_taste
+  - action: utter_sweet
+  - action: utter_ask_for_ingredients
+  - intent: nospecification
+  - action: utter_ingredients_no
+  - action: utter_recipe
+  - action: action_recommend_recipe
+  - action: utter_goodbye
+- story: recommendation-cocktail-with-sour-no-steps:
+  steps:
+  - checkpoint: beggining_checkpoint
+  - intent: recommendation
+  - action: utter_ask_with_without_alk
+  - intent: with
+  - action: action_store_alkohol
+  - action: utter_with_alk
+  - action: utter_ask_taste
+  - intent: sour
+  - action: action_store_taste
+  - action: utter_sour
+  - action: utter_ask_for_ingredients
+  - intent: nospecification
+  - action: utter_ingredients_no
+  - action: utter_recipe
+  - action: action_recommend_recipe
+  - action: utter_goodbye
+- story: recommendation-cocktail-with-bitter-no-steps:
+  steps:
+  - checkpoint: beggining_checkpoint
+  - intent: recommendation
+  - action: utter_ask_with_without_alk
+  - intent: with
+  - action: action_store_alkohol
+  - action: utter_with_alk
+  - action: utter_ask_taste
+  - intent: bitter
+  - action: action_store_taste
+  - action: utter_bitter
+  - action: utter_ask_for_ingredients
+  - intent: nospecification
+  - action: utter_ingredients_no
+  - action: utter_recipe
+  - action: action_recommend_recipe
+  - action: utter_goodbye
+- story: recommendation-cocktail-with-refreshing-no-steps:
+  steps:
+  - checkpoint: beggining_checkpoint
+  - intent: recommendation
+  - action: utter_ask_with_without_alk
+  - intent: with
+  - action: action_store_alkohol
+  - action: utter_with_alk
+  - action: utter_ask_taste
+  - intent: refreshing
+  - action: action_store_taste
+  - action: utter_refreshing
+  - action: utter_ask_for_ingredients
+  - intent: nospecification
+  - action: utter_ingredients_no
+  - action: utter_recipe
+  - action: action_recommend_recipe
+  - action: utter_goodbye
+- story: recommendation-cocktail-with-creamy-no-steps:
+  steps:
+  - checkpoint: beggining_checkpoint
+  - intent: recommendation
+  - action: utter_ask_with_without_alk
+  - intent: with
+  - action: action_store_alkohol
+  - action: utter_with_alk
+  - action: utter_ask_taste
+  - intent: creamy
+  - action: action_store_taste
+  - action: utter_creamy
+  - action: utter_ask_for_ingredients
+  - intent: nospecification
+  - action: utter_ingredients_no
+  - action: utter_recipe
+  - action: action_recommend_recipe
+  - action: utter_goodbye
+- story: recommendation-cocktail-with-spicy-no-steps:
+  steps:
+  - checkpoint: beggining_checkpoint
+  - intent: recommendation
+  - action: utter_ask_with_without_alk
+  - intent: with
+  - action: action_store_alkohol
+  - action: utter_with_alk
+  - action: utter_ask_taste
+  - intent: spicy
+  - action: action_store_taste
+  - action: utter_spicy
+  - action: utter_ask_for_ingredients
+  - intent: nospecification
+  - action: utter_ingredients_no
+  - action: utter_recipe
+  - action: action_recommend_recipe
+  - action: utter_goodbye
+- story: recommendation-cocktail-with-nospecification-no-steps: #8 #32
+  steps:
+  - checkpoint: beggining_checkpoint
+  - intent: recommendation
+  - action: utter_ask_with_without_alk
+  - intent: with
+  - action: action_store_alkohol
+  - action: utter_with_alk
+  - action: utter_ask_taste
+  - intent: nospecification
+  - action: utter_nospecification
+  - action: utter_ask_for_ingredients
+  - intent: nospecification
+  - action: utter_ingredients_no
+  - action: utter_recipe
+  - action: action_recommend_recipe
+  - action: utter_goodbye
+- story: recommendation-cocktail-nospecification-fruity-yes-steps:
+  steps:
+  - checkpoint: beggining_checkpoint
+  - intent: recommendation
+  - action: utter_ask_with_without_alk
+  - intent: nospecification
+  - action: utter_nospecification_alk
+  - action: utter_ask_taste
+  - intent: fruity
+  - action: action_store_taste
+  - action: utter_fruity
+  - action: utter_ask_for_ingredients
+  - intent: yess
+  - action: utter_ingredients_yes
+  - intent: ingredients
+  - action: action_store_ingredients
+  - action: utter_recipe
+  - action: action_recommend_recipe
+  - action: utter_goodbye
+- story: recommendation-cocktail-nospecification-sweet-yes-steps:
+  steps:
+  - checkpoint: beggining_checkpoint
+  - intent: recommendation
+  - action: utter_ask_with_without_alk
+  - intent: nospecification
+  - action: utter_nospecification_alk
+  - action: utter_ask_taste
+  - intent: sweet
+  - action: action_store_taste
+  - action: utter_sweet
+  - action: utter_ask_for_ingredients
+  - intent: yess
+  - action: utter_ingredients_yes
+  - intent: ingredients
+  - action: action_store_ingredients
+  - action: utter_recipe
+  - action: action_recommend_recipe
+  - action: utter_goodbye
+- story: recommendation-cocktail-nospecification-sour-yes-steps:
+  steps:
+  - checkpoint: beggining_checkpoint
+  - intent: recommendation
+  - action: utter_ask_with_without_alk
+  - intent: nospecification
+  - action: utter_nospecification_alk
+  - action: utter_ask_taste
+  - intent: sour
+  - action: action_store_taste
+  - action: utter_sour
+  - action: utter_ask_for_ingredients
+  - intent: yess
+  - action: utter_ingredients_yes
+  - intent: ingredients
+  - action: action_store_ingredients
+  - action: utter_recipe
+  - action: action_recommend_recipe
+  - action: utter_goodbye
+- story: recommendation-cocktail-nospecification-bitter-yes-steps:
+  steps:
+  - checkpoint: beggining_checkpoint
+  - intent: recommendation
+  - action: utter_ask_with_without_alk
+  - intent: nospecification
+  - action: utter_nospecification_alk
+  - action: utter_ask_taste
+  - intent: bitter
+  - action: action_store_taste
+  - action: utter_bitter
+  - action: utter_ask_for_ingredients
+  - intent: yess
+  - action: utter_ingredients_yes
+  - intent: ingredients
+  - action: action_store_ingredients
+  - action: utter_recipe
+  - action: action_recommend_recipe
+  - action: utter_goodbye
+- story: recommendation-cocktail-nospecification-refreshing-yes-steps:
+  steps:
+  - checkpoint: beggining_checkpoint
+  - intent: recommendation
+  - action: utter_ask_with_without_alk
+  - intent: nospecification
+  - action: utter_nospecification_alk
+  - action: utter_ask_taste
+  - intent: refreshing
+  - action: action_store_taste
+  - action: utter_refreshing
+  - action: utter_ask_for_ingredients
+  - intent: yess
+  - action: utter_ingredients_yes
+  - intent: ingredients
+  - action: action_store_ingredients
+  - action: utter_recipe
+  - action: action_recommend_recipe
+  - action: utter_goodbye
+- story: recommendation-cocktail-nospecification-creamy-yes-steps:
+  steps:
+  - checkpoint: beggining_checkpoint
+  - intent: recommendation
+  - action: utter_ask_with_without_alk
+  - intent: nospecification
+  - action: utter_nospecification_alk
+  - action: utter_ask_taste
+  - intent: creamy
+  - action: action_store_taste
+  - action: utter_creamy
+  - action: utter_ask_for_ingredients
+  - intent: yess
+  - action: utter_ingredients_yes
+  - intent: ingredients
+  - action: action_store_ingredients
+  - action: utter_recipe
+  - action: action_recommend_recipe
+  - action: utter_goodbye
+- story: recommendation-cocktail-nospecification-spicy-yes-steps:
+  steps:
+  - checkpoint: beggining_checkpoint
+  - intent: recommendation
+  - action: utter_ask_with_without_alk
+  - intent: nospecification
+  - action: utter_nospecification_alk
+  - action: utter_ask_taste
+  - intent: spicy
+  - action: action_store_taste
+  - action: utter_spicy
+  - action: utter_ask_for_ingredients
+  - intent: yess
+  - action: utter_ingredients_yes
+  - intent: ingredients
+  - action: action_store_ingredients
+  - action: utter_recipe
+  - action: action_recommend_recipe
+  - action: utter_goodbye
+- story: recommendation-cocktail-nospecification-nospecification-yes-steps: #8 #40
+  steps:
+  - checkpoint: beggining_checkpoint
+  - intent: recommendation
+  - action: utter_ask_with_without_alk
+  - intent: nospecification
+  - action: utter_nospecification_alk
+  - action: utter_ask_taste
+  - intent: nospecification
+  - action: utter_nospecification
+  - action: utter_ask_for_ingredients
+  - intent: yess
+  - action: utter_ingredients_yes
+  - intent: ingredients
+  - action: action_store_ingredients
+  - action: utter_recipe
+  - action: action_recommend_recipe
+  - action: utter_goodbye
+- story: recommendation-cocktail-nospecification-fruity-no-steps:
+  steps:
+  - checkpoint: beggining_checkpoint
+  - intent: recommendation
+  - action: utter_ask_with_without_alk
+  - intent: nospecification
+  - action: utter_nospecification_alk
+  - action: utter_ask_taste
+  - intent: fruity
+  - action: action_store_taste
+  - action: utter_fruity
+  - action: utter_ask_for_ingredients
+  - intent: nospecification
+  - action: utter_ingredients_no
+  - action: utter_recipe
+  - action: action_recommend_recipe
+  - action: utter_goodbye
+- story: recommendation-cocktail-nospecification-sweet-no-steps:
+  steps:
+  - checkpoint: beggining_checkpoint
+  - intent: recommendation
+  - action: utter_ask_with_without_alk
+  - intent: nospecification
+  - action: utter_nospecification_alk
+  - action: utter_ask_taste
+  - intent: sweet
+  - action: action_store_taste
+  - action: utter_sweet
+  - action: utter_ask_for_ingredients  
+  - intent: nospecification
+  - action: utter_ingredients_no
+  - action: utter_recipe
+  - action: action_recommend_recipe
+  - action: utter_goodbye
+- story: recommendation-cocktail-nospecification-sour-no-steps:
+  steps:
+  - checkpoint: beggining_checkpoint
+  - intent: recommendation
+  - action: utter_ask_with_without_alk
+  - intent: nospecification
+  - action: utter_nospecification_alk
+  - action: utter_ask_taste
+  - intent: sour
+  - action: action_store_taste
+  - action: utter_sour
+  - action: utter_ask_for_ingredients  
+  - intent: nospecification
+  - action: utter_ingredients_no
+  - action: utter_recipe
+  - action: action_recommend_recipe
+  - action: utter_goodbye
+- story: recommendation-cocktail-nospecification-bitter-no-steps:
+  steps:
+  - checkpoint: beggining_checkpoint
+  - intent: recommendation
+  - action: utter_ask_with_without_alk
+  - intent: nospecification
+  - action: utter_nospecification_alk
+  - action: utter_ask_taste
+  - intent: bitter
+  - action: action_store_taste
+  - action: utter_bitter
+  - action: utter_ask_for_ingredients
+  - intent: nospecification
+  - action: utter_ingredients_no
+  - action: utter_recipe
+  - action: action_recommend_recipe
+  - action: utter_goodbye
+- story: recommendation-cocktail-nospecification-refreshing-no-steps:
+  steps:
+  - checkpoint: beggining_checkpoint
+  - intent: recommendation
+  - action: utter_ask_with_without_alk
+  - intent: nospecification
+  - action: utter_nospecification_alk
+  - action: utter_ask_taste
+  - intent: refreshing
+  - action: action_store_taste
+  - action: utter_refreshing
+  - action: utter_ask_for_ingredients
+  - intent: nospecification
+  - action: utter_ingredients_no
+  - action: utter_recipe
+  - action: action_recommend_recipe
+  - action: utter_goodbye
+- story: recommendation-cocktail-nospecification-creamy-no-steps:
+  steps:
+  - checkpoint: beggining_checkpoint
+  - intent: recommendation
+  - action: utter_ask_with_without_alk
+  - intent: nospecification
+  - action: utter_nospecification_alk
+  - action: utter_ask_taste
+  - intent: creamy
+  - action: action_store_taste
+  - action: utter_creamy
+  - action: utter_ask_for_ingredients
+  - intent: nospecification
+  - action: utter_ingredients_no
+  - action: utter_recipe
+  - action: action_recommend_recipe
+  - action: utter_goodbye
+- story: recommendation-cocktail-nospecification-spicy-no-steps:
+  steps:
+  - checkpoint: beggining_checkpoint
+  - intent: recommendation
+  - action: utter_ask_with_without_alk
+  - intent: nospecification
+  - action: utter_nospecification_alk
+  - action: utter_ask_taste
+  - intent: spicy
+  - action: action_store_taste
+  - action: utter_spicy
+  - action: utter_ask_for_ingredients
+  - intent: nospecification
+  - action: utter_ingredients_no
+  - action: utter_recipe
+  - action: action_recommend_recipe
+  - action: utter_goodbye
+- story: recommendation-cocktail-nospecification-nospecification-no-steps: #8 #50
+  steps:
+  - checkpoint: beggining_checkpoint
+  - intent: recommendation
+  - action: utter_ask_with_without_alk
+  - intent: nospecification
+  - action: utter_nospecification_alk
+  - action: utter_ask_taste
+  - intent: nospecification
+  - action: utter_nospecification
+  - action: utter_ask_for_ingredients
+  - intent: nospecification
+  - action: utter_ingredients_no
+  - action: utter_recipe
+  - action: action_recommend_recipe
+  - action: utter_goodbye
