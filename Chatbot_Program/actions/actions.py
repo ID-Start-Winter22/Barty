@@ -6,10 +6,10 @@
 
 
 from typing import Any, Dict, Text, List 
-from rasa_sdk import Action, Tracker
-from rasa_sdk.executor import CollectingDispatcher
 import json 
 import random
+from rasa_sdk import Action, Tracker
+from rasa_sdk.executor import CollectingDispatcher
 
 # open json file 
 cocktails = open('cocktail.json')
