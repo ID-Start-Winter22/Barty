@@ -15,35 +15,10 @@
 
     <div class="chat-container">
 
-        <!-- <div class="header"> -->
         <img src="./assets/banner.png" class="banner">
 
         <div class="scroll-container" id="scroll-container">
-            <div class="recipe-container">
-
-                <button class="recipe-button" data-active="false" onclick="toggleRecipe(this)">
-                    <div class="recipe-button-title">
-                        <img src="./assets/cocktail-images/caipirinah.png" class="recipe-button-image">
-                        <h4 class="recipe-title">Caipirinah</h4>
-                    </div>
-                </button>
-
-                <button class="recipe-button" data-active="false" onclick="toggleRecipe(this)">
-                    <div class="recipe-button-title">
-                        <img src="./assets/cocktail-images/mojito.png" class="recipe-button-image">
-                        <h4 class="recipe-title">Mojito</h4>
-                    </div>
-                </button>
-
-
-                <button class="recipe-button" data-active="false" onclick="toggleRecipe(this)">
-                    <div class="recipe-button-title">
-                        <img src="./assets/cocktail-images/aperol.png" class="recipe-button-image">
-                        <h4 class="recipe-title">Langer Aperol Spritz</h4>
-                    </div>
-                </button>
-
-            </div>
+        
         </div>
         <form class="send-form" id="message-form" onsubmit="submitForm(event)">
             <input type="text" class="message-input" id="message-input" placeholder="Schreibe eine Nachricht..."
@@ -53,18 +28,6 @@
             </button>
         </form>
     </div>
-
-    <!-- <div 
-        id="rasa-chat-widget" 
-        data-websocket-url="http://localhost:5005/"  
-        data-height=580
-        data-avatar-url="./assets/chatIconSized.png"
-        data-avatar-background="#FFFFFF"
-        data-primary="#24b760"
-        data-default-open="true"
-        data-primary-highlight="##c4d32b">
-    </div>
-    <script src="https://unpkg.com/@rasahq/rasa-chat" type="application/javascript"></script> -->
 
 </body>
 

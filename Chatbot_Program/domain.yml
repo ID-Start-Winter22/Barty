@@ -10,6 +10,9 @@ intents:
   - mojito
   - caipirinha
 
+actions:
+  - action_get_recipe
+
 responses:
   utter_greet:
   - text: "Hi👋. Wie kann ich dir helfen?"
