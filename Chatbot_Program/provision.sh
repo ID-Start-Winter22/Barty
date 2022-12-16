@@ -38,10 +38,10 @@ then # updated frontend is in use
     sed -i -e "s/localhost/$IP/g" static/js/constants.js
     sudo cp -r $DIR /var/www/html
 else # default frontend is in use
-    echo "$DIR directory does not exist. Replace localhost with $IP in index.html..."
-    sed -i -e "s/localhost/$IP/g" index.html
+    echo "$DIR directory does not exist. Replace localhost with $IP in frontend/index.html..."
+    sed -i -e "s/localhost/$IP/g" frontend/index.html
 fi
-sudo cp index.html /var/www/html
+sudo cp frontend/index.html /var/www/html
 sudo systemctl restart apache2
 
 
