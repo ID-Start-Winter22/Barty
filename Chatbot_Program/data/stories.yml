@@ -91,10 +91,10 @@ stories:
   - intent: cocktail_name
   - action: utter_recipe_by_name
   - action: action_store_cocktailname
-  - intent: utter_goodbye
+  - action: utter_goodbye
 
 ###BEGINN OF THE RECOMMENDATION PATH###
-- story: recommendation-cocktail-without-fruity-yes-steps:
+- story: recommendation-cocktail-without-fruity-yes-steps
   steps:
   - checkpoint: beggining_checkpoint
   - intent: recommendation
@@ -114,7 +114,7 @@ stories:
   - action: utter_recipe
   - action: action_recommend_recipe
   - action: utter_goodbye
-- story: recommendation-cocktail-without-sweet-yes-steps:
+- story: recommendation-cocktail-without-sweet-yes-steps
   steps:
   - checkpoint: beggining_checkpoint
   - intent: recommendation
@@ -135,7 +135,7 @@ stories:
   - action: action_recommend_recipe
   - action: utter_goodbye
 
-- story: recommendation-cocktail-without-sour-yes-steps:
+- story: recommendation-cocktail-without-sour-yes-steps
   steps:
   - checkpoint: beggining_checkpoint
   - intent: recommendation
@@ -155,7 +155,7 @@ stories:
   - action: utter_recipe
   - action: action_recommend_recipe
   - action: utter_goodbye
-- story: recommendation-cocktail-without-bitter-yes-steps:
+- story: recommendation-cocktail-without-bitter-yes-steps
   steps:
   - checkpoint: beggining_checkpoint
   - intent: recommendation
@@ -175,7 +175,7 @@ stories:
   - action: utter_recipe
   - action: action_recommend_recipe
   - action: utter_goodbye
-- story: recommendation-cocktail-without-refreshing-yes-steps:
+- story: recommendation-cocktail-without-refreshing-yes-steps
   steps:
   - checkpoint: beggining_checkpoint
   - intent: recommendation
@@ -195,7 +195,7 @@ stories:
   - action: utter_recipe
   - action: action_recommend_recipe
   - action: utter_goodbye
-- story: recommendation-cocktail-without-creamy-yes-steps:
+- story: recommendation-cocktail-without-creamy-yes-steps
   steps:
   - checkpoint: beggining_checkpoint
   - intent: recommendation
@@ -215,7 +215,7 @@ stories:
   - action: utter_recipe
   - action: action_recommend_recipe
   - action: utter_goodbye
-- story: recommendation-cocktail-without-spicy-yes-steps:
+- story: recommendation-cocktail-without-spicy-yes-steps
   steps:
   - checkpoint: beggining_checkpoint
   - intent: recommendation
@@ -235,7 +235,7 @@ stories:
   - action: utter_recipe
   - action: action_recommend_recipe
   - action: utter_goodbye
-- story: recommendation-cocktail-without-nospecification-yes-steps: #8 
+- story: recommendation-cocktail-without-nospecification-yes-steps
   steps:
   - checkpoint: beggining_checkpoint
   - intent: recommendation
@@ -254,7 +254,7 @@ stories:
   - action: utter_recipe
   - action: action_recommend_recipe
   - action: utter_goodbye
-- story: recommendation-cocktail-without-fruity-no-steps:
+- story: recommendation-cocktail-without-fruity-no-steps
   steps:
   - checkpoint: beggining_checkpoint
   - intent: recommendation
@@ -272,7 +272,7 @@ stories:
   - action: utter_recipe
   - action: action_recommend_recipe
   - action: utter_goodbye
-- story: recommendation-cocktail-without-sweet-no-steps:
+- story: recommendation-cocktail-without-sweet-no-steps
   steps:
   - checkpoint: beggining_checkpoint
   - intent: recommendation
@@ -291,7 +291,7 @@ stories:
   - action: action_recommend_recipe
   - action: utter_goodbye
 
-- story: recommendation-cocktail-without-sour-no-steps:
+- story: recommendation-cocktail-without-sour-no-steps
   steps:
   - checkpoint: beggining_checkpoint
   - intent: recommendation
@@ -309,7 +309,7 @@ stories:
   - action: utter_recipe
   - action: action_recommend_recipe
   - action: utter_goodbye
-- story: recommendation-cocktail-without-bitter-no-steps:
+- story: recommendation-cocktail-without-bitter-no-steps
   steps:
   - checkpoint: beggining_checkpoint
   - intent: recommendation
@@ -327,7 +327,7 @@ stories:
   - action: utter_recipe
   - action: action_recommend_recipe
   - action: utter_goodbye
-- story: recommendation-cocktail-without-refreshing-no-steps:
+- story: recommendation-cocktail-without-refreshing-no-steps
   steps:
   - checkpoint: beggining_checkpoint
   - intent: recommendation
@@ -345,7 +345,7 @@ stories:
   - action: utter_recipe
   - action: action_recommend_recipe
   - action: utter_goodbye
-- story: recommendation-cocktail-without-creamy-no-steps:
+- story: recommendation-cocktail-without-creamy-no-steps
   steps:
   - checkpoint: beggining_checkpoint
   - intent: recommendation
@@ -363,7 +363,7 @@ stories:
   - action: utter_recipe
   - action: action_recommend_recipe
   - action: utter_goodbye
-- story: recommendation-cocktail-without-spicy-no-steps:
+- story: recommendation-cocktail-without-spicy-no-steps
   steps:
   - checkpoint: beggining_checkpoint
   - intent: recommendation
@@ -381,7 +381,7 @@ stories:
   - action: utter_recipe
   - action: action_recommend_recipe
   - action: utter_goodbye
-- story: recommendation-cocktail-without-nospecification-no-steps:
+- story: recommendation-cocktail-without-nospecification-no-steps
   steps:
   - checkpoint: beggining_checkpoint
   - intent: recommendation
@@ -398,7 +398,7 @@ stories:
   - action: utter_recipe
   - action: action_recommend_recipe
   - action: utter_goodbye
-- story: recommendation-cocktail-with-fruity-yes-steps: #8 #16
+- story: recommendation-cocktail-with-fruity-yes-steps
   steps:
   - checkpoint: beggining_checkpoint
   - intent: recommendation
@@ -418,7 +418,7 @@ stories:
   - action: utter_recipe
   - action: action_recommend_recipe
   - action: utter_goodbye
-- story: recommendation-cocktail-with-sweet-yes-steps:
+- story: recommendation-cocktail-with-sweet-yes-steps
   steps:
   - checkpoint: beggining_checkpoint
   - intent: recommendation
@@ -438,7 +438,7 @@ stories:
   - action: utter_recipe
   - action: action_recommend_recipe
   - action: utter_goodbye
-- story: recommendation-cocktail-with-sour-yes-steps:
+- story: recommendation-cocktail-with-sour-yes-steps
   steps:
   - checkpoint: beggining_checkpoint
   - intent: recommendation
@@ -458,7 +458,7 @@ stories:
   - action: utter_recipe
   - action: action_recommend_recipe
   - action: utter_goodbye
-- story: recommendation-cocktail-with-bitter-yes-steps:
+- story: recommendation-cocktail-with-bitter-yes-steps
   steps:
   - checkpoint: beggining_checkpoint
   - intent: recommendation
@@ -478,7 +478,7 @@ stories:
   - action: utter_recipe
   - action: action_recommend_recipe
   - action: utter_goodbye
-- story: recommendation-cocktail-with-refreshing-yes-steps:
+- story: recommendation-cocktail-with-refreshing-yes-steps
   steps:
   - checkpoint: beggining_checkpoint
   - intent: recommendation
@@ -498,7 +498,7 @@ stories:
   - action: utter_recipe
   - action: action_recommend_recipe
   - action: utter_goodbye
-- story: recommendation-cocktail-with-creamy-yes-steps:
+- story: recommendation-cocktail-with-creamy-yes-steps
   steps:
   - checkpoint: beggining_checkpoint
   - intent: recommendation
@@ -518,7 +518,7 @@ stories:
   - action: utter_recipe
   - action: action_recommend_recipe
   - action: utter_goodbye
-- story: recommendation-cocktail-with-spicy-yes-steps:
+- story: recommendation-cocktail-with-spicy-yes-steps
   steps:
   - checkpoint: beggining_checkpoint
   - intent: recommendation
@@ -538,7 +538,7 @@ stories:
   - action: utter_recipe
   - action: action_recommend_recipe
   - action: utter_goodbye
-- story: recommendation-cocktail-with-nospecification-yes-steps: #8 #24
+- story: recommendation-cocktail-with-nospecification-yes-steps
   steps:
   - checkpoint: beggining_checkpoint
   - intent: recommendation
@@ -557,7 +557,7 @@ stories:
   - action: utter_recipe
   - action: action_recommend_recipe
   - action: utter_goodbye
-- story: recommendation-cocktail-with-fruity-no-steps:
+- story: recommendation-cocktail-with-fruity-no-steps
   steps:
   - checkpoint: beggining_checkpoint
   - intent: recommendation
@@ -575,7 +575,7 @@ stories:
   - action: utter_recipe
   - action: action_recommend_recipe
   - action: utter_goodbye
-- story: recommendation-cocktail-with-sweet-no-steps:
+- story: recommendation-cocktail-with-sweet-no-steps
   steps:
   - checkpoint: beggining_checkpoint
   - intent: recommendation
@@ -593,7 +593,7 @@ stories:
   - action: utter_recipe
   - action: action_recommend_recipe
   - action: utter_goodbye
-- story: recommendation-cocktail-with-sour-no-steps:
+- story: recommendation-cocktail-with-sour-no-steps
   steps:
   - checkpoint: beggining_checkpoint
   - intent: recommendation
@@ -611,7 +611,7 @@ stories:
   - action: utter_recipe
   - action: action_recommend_recipe
   - action: utter_goodbye
-- story: recommendation-cocktail-with-bitter-no-steps:
+- story: recommendation-cocktail-with-bitter-no-steps
   steps:
   - checkpoint: beggining_checkpoint
   - intent: recommendation
@@ -629,7 +629,7 @@ stories:
   - action: utter_recipe
   - action: action_recommend_recipe
   - action: utter_goodbye
-- story: recommendation-cocktail-with-refreshing-no-steps:
+- story: recommendation-cocktail-with-refreshing-no-steps
   steps:
   - checkpoint: beggining_checkpoint
   - intent: recommendation
@@ -647,7 +647,7 @@ stories:
   - action: utter_recipe
   - action: action_recommend_recipe
   - action: utter_goodbye
-- story: recommendation-cocktail-with-creamy-no-steps:
+- story: recommendation-cocktail-with-creamy-no-steps
   steps:
   - checkpoint: beggining_checkpoint
   - intent: recommendation
@@ -665,7 +665,7 @@ stories:
   - action: utter_recipe
   - action: action_recommend_recipe
   - action: utter_goodbye
-- story: recommendation-cocktail-with-spicy-no-steps:
+- story: recommendation-cocktail-with-spicy-no-steps
   steps:
   - checkpoint: beggining_checkpoint
   - intent: recommendation
@@ -683,7 +683,7 @@ stories:
   - action: utter_recipe
   - action: action_recommend_recipe
   - action: utter_goodbye
-- story: recommendation-cocktail-with-nospecification-no-steps: #8 #32
+- story: recommendation-cocktail-with-nospecification-no-steps
   steps:
   - checkpoint: beggining_checkpoint
   - intent: recommendation
@@ -700,7 +700,7 @@ stories:
   - action: utter_recipe
   - action: action_recommend_recipe
   - action: utter_goodbye
-- story: recommendation-cocktail-nospecification-fruity-yes-steps:
+- story: recommendation-cocktail-nospecification-fruity-yes-steps
   steps:
   - checkpoint: beggining_checkpoint
   - intent: recommendation
@@ -719,7 +719,7 @@ stories:
   - action: utter_recipe
   - action: action_recommend_recipe
   - action: utter_goodbye
-- story: recommendation-cocktail-nospecification-sweet-yes-steps:
+- story: recommendation-cocktail-nospecification-sweet-yes-steps
   steps:
   - checkpoint: beggining_checkpoint
   - intent: recommendation
@@ -738,7 +738,7 @@ stories:
   - action: utter_recipe
   - action: action_recommend_recipe
   - action: utter_goodbye
-- story: recommendation-cocktail-nospecification-sour-yes-steps:
+- story: recommendation-cocktail-nospecification-sour-yes-steps
   steps:
   - checkpoint: beggining_checkpoint
   - intent: recommendation
@@ -757,7 +757,7 @@ stories:
   - action: utter_recipe
   - action: action_recommend_recipe
   - action: utter_goodbye
-- story: recommendation-cocktail-nospecification-bitter-yes-steps:
+- story: recommendation-cocktail-nospecification-bitter-yes-steps
   steps:
   - checkpoint: beggining_checkpoint
   - intent: recommendation
@@ -776,7 +776,7 @@ stories:
   - action: utter_recipe
   - action: action_recommend_recipe
   - action: utter_goodbye
-- story: recommendation-cocktail-nospecification-refreshing-yes-steps:
+- story: recommendation-cocktail-nospecification-refreshing-yes-steps
   steps:
   - checkpoint: beggining_checkpoint
   - intent: recommendation
@@ -795,7 +795,7 @@ stories:
   - action: utter_recipe
   - action: action_recommend_recipe
   - action: utter_goodbye
-- story: recommendation-cocktail-nospecification-creamy-yes-steps:
+- story: recommendation-cocktail-nospecification-creamy-yes-steps
   steps:
   - checkpoint: beggining_checkpoint
   - intent: recommendation
@@ -814,7 +814,7 @@ stories:
   - action: utter_recipe
   - action: action_recommend_recipe
   - action: utter_goodbye
-- story: recommendation-cocktail-nospecification-spicy-yes-steps:
+- story: recommendation-cocktail-nospecification-spicy-yes-steps
   steps:
   - checkpoint: beggining_checkpoint
   - intent: recommendation
@@ -833,7 +833,7 @@ stories:
   - action: utter_recipe
   - action: action_recommend_recipe
   - action: utter_goodbye
-- story: recommendation-cocktail-nospecification-nospecification-yes-steps: #8 #40
+- story: recommendation-cocktail-nospecification-nospecification-yes-steps
   steps:
   - checkpoint: beggining_checkpoint
   - intent: recommendation
@@ -851,7 +851,7 @@ stories:
   - action: utter_recipe
   - action: action_recommend_recipe
   - action: utter_goodbye
-- story: recommendation-cocktail-nospecification-fruity-no-steps:
+- story: recommendation-cocktail-nospecification-fruity-no-steps
   steps:
   - checkpoint: beggining_checkpoint
   - intent: recommendation
@@ -868,7 +868,7 @@ stories:
   - action: utter_recipe
   - action: action_recommend_recipe
   - action: utter_goodbye
-- story: recommendation-cocktail-nospecification-sweet-no-steps:
+- story: recommendation-cocktail-nospecification-sweet-no-steps
   steps:
   - checkpoint: beggining_checkpoint
   - intent: recommendation
@@ -885,7 +885,7 @@ stories:
   - action: utter_recipe
   - action: action_recommend_recipe
   - action: utter_goodbye
-- story: recommendation-cocktail-nospecification-sour-no-steps:
+- story: recommendation-cocktail-nospecification-sour-no-steps
   steps:
   - checkpoint: beggining_checkpoint
   - intent: recommendation
@@ -902,7 +902,7 @@ stories:
   - action: utter_recipe
   - action: action_recommend_recipe
   - action: utter_goodbye
-- story: recommendation-cocktail-nospecification-bitter-no-steps:
+- story: recommendation-cocktail-nospecification-bitter-no-steps
   steps:
   - checkpoint: beggining_checkpoint
   - intent: recommendation
@@ -919,7 +919,7 @@ stories:
   - action: utter_recipe
   - action: action_recommend_recipe
   - action: utter_goodbye
-- story: recommendation-cocktail-nospecification-refreshing-no-steps:
+- story: recommendation-cocktail-nospecification-refreshing-no-steps
   steps:
   - checkpoint: beggining_checkpoint
   - intent: recommendation
@@ -936,7 +936,7 @@ stories:
   - action: utter_recipe
   - action: action_recommend_recipe
   - action: utter_goodbye
-- story: recommendation-cocktail-nospecification-creamy-no-steps:
+- story: recommendation-cocktail-nospecification-creamy-no-steps
   steps:
   - checkpoint: beggining_checkpoint
   - intent: recommendation
@@ -953,7 +953,7 @@ stories:
   - action: utter_recipe
   - action: action_recommend_recipe
   - action: utter_goodbye
-- story: recommendation-cocktail-nospecification-spicy-no-steps:
+- story: recommendation-cocktail-nospecification-spicy-no-steps
   steps:
   - checkpoint: beggining_checkpoint
   - intent: recommendation
@@ -970,7 +970,7 @@ stories:
   - action: utter_recipe
   - action: action_recommend_recipe
   - action: utter_goodbye
-- story: recommendation-cocktail-nospecification-nospecification-no-steps: #8 #50
+- story: recommendation-cocktail-nospecification-nospecification-no-steps
   steps:
   - checkpoint: beggining_checkpoint
   - intent: recommendation
