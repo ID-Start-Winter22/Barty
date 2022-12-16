@@ -5,42 +5,146 @@ intents:
   - goodbye
   - drink
   - recipe
-  - fresh
+  - cocktail_name
+  - cocktail_by_name
+  - random_cocktail
+  - name
+  - yess
   - bot_challenge
-  - mojito
-  - caipirinha
+  - recommendation
+  - without
+  - with
+  - nospecification
+  - fruity
+  - sweet
+  - sour
+  - bitter
+  - refreshing
+  - creamy
+  - spicy
+  - ingredients
+
+actions:
+  - utter_greet
+  - utter_goodbye
+  - utter_choose_help
+  - utter_give_options
+  - utter_ask_for_affirmation
+  - utter_random_recipe
+  - utter_get_cocktail_name
+  - utter_recipe_by_name
+  - utter_without_alk
+  - utter_with_alk
+  - utter_nospecification_alk
+  - utter_ask_taste
+  - utter_fruity
+  - utter_refreshing
+  - utter_bitter
+  - utter_sour
+  - utter_sweet
+  - utter_spicy
+  - utter_nospecification
+  - utter_ask_for_ingredients
+  - utter_ingredients_yes
+  - utter_ingredients_no
+  - utter_recipe
+  - action_get_recipe
+  - action_random_recipe
+  - action_store_cocktailname
+  - action_store_alkohol
+  - action_store_taste
+  - action_store_ingredients
+  - action_recommend_recipe
 
 responses:
+
   utter_greet:
-  - text: "Hi👋. Wie kann ich dir helfen?"
+  - text: "👋🏻Hallo, ich bin Barty, der Barkeeper \n Wer ist denn die entzückende Person mit der ich rede?"
 
   utter_choose_help:
-  - text: "Willst du ein Rezept für ein Cocktail oder ein zufälliges Mischgetränk."
+  - text: "Was eine Ehre.<br> Wie kann ich dir helfen?"
 
-  utter_taste:
-  - text: "Nach was ist dir denn."
+  utter_give_options:
+  - text: "Ein Cocktail? <br> Jaja, Spaß müssen wir ja alle ab und zu haben. \n Hast du einen bestimmten Cocktail im Sinn?🍸 <br> Willst du einen Cocktail nach deinen Wünschen empfohlen bekommen?🍹 <br> Oder soll es eine zufällige Mische mit den Zutaten in deiner Nähe werden?🥂"
+
+  utter_ask_for_affirmation:
+  - text: "Aha, ein zufälliges Mischgetränk also. <br> in meiner Freundesgruppe machen es nur die ganz harten. 💪 <br> Bist du sicher?"
+
+  utter_random_recipe:
+  - text: "Okay. Also mach dich bereit. <br> Dein Rezept laut wie folgt:"
+
+  utter_get_cocktail_name:
+  - text: "Oho, da weiß woll jemand, was er will. <br> Na dann, sag was du möchtest."
+
+  utter_recipe_by_name:
+  - text: "Herrvoragende Wahl.👅 <br> Erfreulich zuhören, dass sich jemand auskennt in diesem Gebiet."
 
   utter_goodbye:
-  - text: "Bye"
+  - text: "Lass es dir schmecken. <br> Und wir hören uns beim nächsten Mal wieder."
+
+  utter_ask_with_without_alk:
+  - text: "Dein Wunsch ist mein Befehl. \n 🍾Willst du ein Cocktail mit oder ohne Alkohol haben?🍾"
+
+  utter_without_alk:
+  - text: "Sehr vorbildlich. <br> Oder ist da jemand Fahrer?"
+
+  utter_with_alk:
+  - text: "Aha, also rede ich hier mit einem Draufgänger."
+
+  utter_ask_taste:
+  - text: "🌶️🍫Jetzt, wo wir das geklärt haben, wie siehts mit der Geschmacksrichtung aus.🍓🥥 \n Im Sortiment gibt es: <br>  Fruchtig, süß, sauer, bitter, erfrischend, cremig und würzig"
+
+  utter_fruity:
+  - text: "Uhhh Fruchtig.🍓<br> Mach dich auf eine Abenteuerreise durch einen tropischen Dschungel gefasst."
+
+  utter_sweet:
+  - text: "Aha, also soll er genauso süß sein wie du.🍬"
+
+  utter_sour:
+  - text: "Süßes oder Saures?  <br> Nichts Süßes? <br> Na dann bekommst du was Saures.🍋"
+
+  utter_bitter:
+  - text: "Bitter🍫, das kriege ich hin."
+
+  utter_refreshing:
+  - text: "Also was erfrischendes.💦 <br> Brauchst du etwa Abkühlung von deinem hitzigen Leben"
+
+  utter_creamy:
+  - text: "Mhmm, cremig.🥥 Da denke ich immer an Mama's Sahne Torte."
+
+  utter_spicy:
+  - text: "Würzig?🌶️ Da traut sich aber jemand ran."
+
+  utter_ask_for_ingredients:
+  - text: "So lala. Jetzt kommen wir auch langsam zum Ende. <br> Auch wenn es so schön war mit dir zu reden. \n Willst du ein rezept mit Zutaten in deiner Nähe haben? 🍌🍋🧃🍷"
+
+
+  utter_nospecification:
+  - text: "Auch in Ordnung, man kann sich ja Optionen freihalten. <br> Mach ich auch manchmal."
+
+  utter_ingredients_yes:
+  - text: "Oho, willst du etwa keine Zutaten verschwenden, sehr vorbildlich. <br> Dann sag mal was du in der Nähe rum liegen hast."
+
+  utter_ingredients_no:
+  - text: "Dann nicht mein Freund. <br> Nächstes mal vielleicht."
+
+
+  utter_recipe:
+  - text: "Ich bin bereit dir deinen Cocktail zu nennen. <br> Trommelwirbel. 🥁"
+
+
 
   utter_iamabot:
-  - text: "Ich bin Barty. Dein perönlicher ChatBot um den idealen Cocktail für jede situation zu finden. \n 
-          Du kanns mich jederzeit nach Rat fragen."
+  - text: "Ich bin Barty. Dein perönlicher ChatBot um den idealen Cocktail für jede situation zu finden. <br>  Du kannst mich jederzeit nach Rat fragen."
 
-  utter_propose_fresh_recipe:
-  - text: "Das wären 2 Frische Getränke. Welches Willst du?"
-    buttons:
-    - title: "Caipirinha"
-      payload: "Caipirinha"
-    - title: "Mojito"
-      payload: "Mojito"
+  utter_propose_sweet_recipe: 
+  - text: "Aha, also soll er genauso süß sein wie du."
 
-  utter_mojito_recipe:
-  - text: "Hier ist das Retzept für einen Mojito."
+  utter_propose_bitter_recipe:
+  - text: "Süßes oder Sauers? Nicht Süßes? Na dann bekommst du was Saures."
 
-  utter_caipirinha_recipe:
-  - text: "Hier ist das Retzept für einen Caipirinha."
-    
+  utter_propose_fruity_recipe:
+  - text: "Uhhh Fruchtig. Mach dich auf eine Abenteuerreise durch einen tropischen Dschungel gefasst."
 
 session_config:
   session_expiration_time: 60
