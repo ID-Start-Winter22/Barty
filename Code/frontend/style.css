@@ -4,7 +4,7 @@
   font-weight: 500 700;
 }
 body {
-  background: linear-gradient(rgba(0, 0, 0, 0.6745098039), rgba(0, 0, 0, 0.6745098039)), url("./assets/pexels-chris-f-1283219.jpg");
+  background: linear-gradient(rgba(0, 0, 0, 0.6745098039), rgba(0, 0, 0, 0.6745098039)), url("../assets/pexels-chris-f-1283219.jpg");
   background-size: cover;
   background-position: center;
   color: #E3DDDD;

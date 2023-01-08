@@ -15,7 +15,7 @@ $text: #E3DDDD;
 
 
 body {
-    background: linear-gradient(#000000ac, #000000ac), url('./assets/pexels-chris-f-1283219.jpg');
+    background: linear-gradient(#000000ac, #000000ac), url('../assets/pexels-chris-f-1283219.jpg');
     background-size: cover;
     background-position: center;
     color: $text;
@@ -269,92 +269,3 @@ body {
         }
     }
 }
-
-// .css-1kgb40s {
-//         position: absolute;
-//         height: 75vh !important;
-//         width: 75vw !important;
-//         left: 50%;
-//         top: 50%;
-//         transform: translate(-50%, -50%);
-
-//         &>div[style] {
-//             flex-grow: 1 !important;
-//             height: 100% !important;
-//             width: 100% !important;
-//             border: none !important;
-//             border-radius: 1rem !important;
-
-//             .css-qpwdbp {
-//                 background-color: $bg-secondary !important;
-
-//                 .css-1403hqg {
-//                     background-color: $bg-cta;
-//                     color: $text !important;
-//                 }
-
-//                 .css-1di2tiy {
-//                     background-color: $bg-primary;
-//                     color: $text !important;
-//                 }
-//             }
-
-//             .css-2gik0r {
-//                 background-color: $bg-cta !important;
-//                 border: none !important;
-
-//                 .css-lavkg7 {
-//                     background-color: $bg-cta !important;
-//                     color: $text !important;
-//                 }
-//             }
-//         }
-
-//         .css-hbb298 {
-//             display: none;
-//         }
-
-//         .css-vurnku {
-
-//             background-color: transparent;
-
-//             &>button {
-//                 background-color: $bg-cta;
-//                 color: $text;
-
-//                 :hover {
-//                     background-color: lighten($bg-cta, 10) !important;
-//                     box-shadow: $drop-shadow-hover !important;
-//                 }
-
-//                 :active {
-//                     background-color: lighten($bg-cta, 5) !important;
-//                     box-shadow: $drop-shadow-active !important;
-//                 }
-//             }
-//         }
-
-//         .css-klsenx {
-//             display: flex;
-//             flex-flow: row;
-//             gap: .5rem;
-//             padding-left: 2rem;
-//         }
-
-//         .css-463jce {
-//             height: fit-content;
-//             width: fit-content;
-
-//             .css-wpkmsk {
-//                 height: 44px;
-//                 width: 44px;
-//                 background: transparent !important;
-
-//                 &>img {
-//                     width: 48px;
-//                     height: 48px;
-//                 }
-//             }
-//         }
-
-// }
