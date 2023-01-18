@@ -8,6 +8,22 @@ intents:
   - mood_great
   - mood_unhappy
   - bot_challenge
+  - taste_selected
+  - alcohol_selected
+
+actions:
+  - action_display_taste
+  - action_handle_taste
+  - action_display_alcohol
+  - action_handle_alcohol
+  - action_get_cocktails
+
+slots:
+  taste:
+    type: text
+    influence_conversation: false
+    mappings:
+    - type: custom
 
 responses:
   utter_greet:

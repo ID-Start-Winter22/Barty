@@ -28,6 +28,7 @@ body {
     p {
         font-family: "Raleway";
         font-size: 1.25rem;
+        line-height: 1.75rem;
         margin: 0;
         font-weight: 500;
         color: $text;
@@ -48,224 +49,248 @@ body {
         font-weight: 700;
         color: $text;
     }
+}
 
-    .chat-container {
-        position: absolute;
-        backdrop-filter: blur(64px);
-        left: 50%;
-        top: 50%;
-        transform: translate(-50%, -50%);
-        background: $bg-secondary;
-        border-radius: 1rem;
-        height: 95vh;
-        width: 50vh;
-        max-width: 100%;
+.chat-container {
+    position: absolute;
+    backdrop-filter: blur(64px);
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background: $bg-secondary;
+    border-radius: 1rem;
+    height: 95vh;
+    width: 50vh;
+    max-width: 100%;
+    overflow: hidden;
+    display: flex;
+    flex-flow: column;
+    gap: .5rem;
+
+    .banner {
+        width: calc(100% - 1rem);
+        aspect-ratio: 16 / 4.1;
+        margin: .5rem;
+        background-size: cover;
+        background-repeat: no-repeat;
+        display: block;
+        border-radius: .5rem;
+        box-shadow: $drop-shadow-passiv;
+    }
+
+    .title {
+        font-size: 2rem;
+        margin: 0;
+    }
+
+    .scroll-container {
+        width: calc(100% - 2rem);
+        flex-grow: 1;
+        overflow: hidden auto;
+        padding: 1rem 1rem 10vh 1rem !important;
+    }
+}
+
+.bot-message-row {
+    width: 100%;
+    display: flex;
+    flex-flow: row;
+    justify-content: start;
+    margin-bottom: 1rem;
+
+    .message-container {
+        background-color: $bg-primary;
+        width: fit-content;
+        max-width: 75%;
+        height: fit-content;
+        border-radius: .5rem;
+        padding: .5rem;
+        box-shadow: $drop-shadow-passiv;
+    }
+}
+
+.user-message-row {
+    width: 100%;
+    display: flex;
+    flex-flow: row;
+    justify-content: end;
+    margin-bottom: 1rem;
+
+    .message-container {
+        background-color: $bg-cta;
+        width: fit-content;
+        max-width: 75%;
+        height: fit-content;
+        border-radius: .5rem;
+        padding: .5rem;
+        box-shadow: $drop-shadow-passiv;
+    }
+}
+
+.cocktails-container {
+    display: flex;
+    flex-flow: column;
+
+    .cocktail-container {
         overflow: hidden;
-        display: flex;
-        flex-flow: column;
-        gap: .5rem;
+        display: block;
+        width: 100%;
+        background: $bg-cta;
+        border-radius: 1rem;
+        border: none;
+        padding: 0;
+        margin-bottom: 1rem;
+        box-shadow: $drop-shadow;
+        will-change: height, box-shadow, background-color;
+        transition: box-shadow 150ms, background-color 150ms, height 300ms;
 
-        .banner {
-            width: calc(100% - 1rem);
-            aspect-ratio: 16 / 4.1;
+        .cocktail-header {
+            display: flex;
+            flex-flow: row;
+            gap: 2rem;
+            align-items: center;
             margin: .5rem;
-            background-size: cover;
-            background-repeat: no-repeat;
-            display: block;
-            border-radius: .5rem;
+
+            .cocktail-img {
+                width: 20%;
+                aspect-ratio: 1 / 1;
+                border-radius: .5rem;
+            }
+        }
+
+        .cocktail-body {
+            display: flex;
+            flex-flow: column;
+            margin: 0 .5rem;
+            max-height: 0;
+
+            & > * {
+                text-align: left;
+                margin: .5rem;
+            }
+        }
+
+        &:disabled > .cocktail-body{
+            margin: .5rem;
+            max-height: unset;
+        }
+
+        &[data-selected = "false"] {
+            padding: 0 !important;
+            margin: 0 !important;
+            height: 0 !important;
+        }
+    }
+}
+
+.selection-button-container {
+    display: flex;
+    flex-flow: column;
+    margin-bottom: 1rem;
+
+    .selction-button {
+        padding: 1rem;
+        margin: .25rem 0;
+        background: $bg-cta;
+        color: $text;
+        font-size: 1.5rem;
+        border-radius: .5rem;
+        border: none;
+        box-shadow: $drop-shadow;
+        will-change: box-shadow, background-color;
+        transition: all 150ms;
+        overflow: hidden;
+
+        &:hover {
+            box-shadow: $drop-shadow-hover;
+            background-color: $bg-cta;
+        }
+
+        &:active {
+            box-shadow: $drop-shadow-active;
+            background-color: $bg-cta;
+        }
+        &:disabled {
             box-shadow: $drop-shadow-passiv;
+            background-color: $bg-secondary;
+            width: fit-content;
+            padding: .5rem;
+        }
+        &[data-selected = "false"] {
+            padding: 0 !important;
+            margin: 0 !important;
+            height: 0 !important;
+        }
+    }
+}
+
+
+
+.send-form {
+    flex-grow: 0;
+    width: calc(100% - 2rem);
+    display: flex;
+    flex-flow: row;
+    gap: 1rem;
+    padding: 1rem;
+
+    .message-input {
+        flex-grow: 1;
+        min-width: 8rem;
+        height: 100%;
+        color: $text;
+        background: $bg-cta;
+        border-radius: .5rem;
+        border: none;
+        padding: 0 1rem;
+        box-shadow: $drop-shadow;
+        font-size: 1.5rem;
+        transition: all 150ms;
+
+        &:hover {
+            box-shadow: $drop-shadow-hover;
+            background-color: $bg-cta;
         }
 
-        .title {
-            font-size: 2rem;
-            margin: 0;
+        &:active {
+            box-shadow: $drop-shadow-active;
+            background-color: $bg-cta;
         }
 
-        .scroll-container {
-            width: calc(100% - 2rem);
-            flex-grow: 1;
-            overflow: hidden auto;
-            padding: 1rem 1rem 10vh 1rem !important;
-
-            .bot-message-row {
-                width: 100%;
-                display: flex;
-                flex-flow: row;
-                justify-content: start;
-                margin-bottom: 1rem;
-
-                .message-container {
-                    background-color: $bg-primary;
-                    width: fit-content;
-                    max-width: 75%;
-                    height: fit-content;
-                    border-radius: .5rem;
-                    padding: .5rem;
-                    box-shadow: $drop-shadow-passiv;
-                }
-            }
-
-            .user-message-row {
-                width: 100%;
-                display: flex;
-                flex-flow: row;
-                justify-content: end;
-                margin-bottom: 1rem;
-
-                .message-container {
-                    background-color: $bg-cta;
-                    width: fit-content;
-                    max-width: 75%;
-                    height: fit-content;
-                    border-radius: .5rem;
-                    padding: .5rem;
-                    box-shadow: $drop-shadow-passiv;
-                }
-            }
-
-
-            .recipe-container {
-                width: 100%;
-                max-height: 162px;
-                display: block;
-                padding: 0;
-                background: $bg-primary;
-                box-shadow: $drop-shadow-passiv;
-                border-radius: 1rem;
-                margin-bottom: 1rem;
-                transition: all 333ms ease-out;
-                overflow: hidden !important;
-
-                .recipe-header {
-                    width: 100%;
-                    display: inline-flex;
-                    gap: 2rem;
-                    align-items: center;
-                    padding: .5rem;
-                    background-color: $bg-cta;
-                    border: none;
-                    text-align: start;
-                    border-radius: 1rem;
-                    box-shadow: $drop-shadow;
-                    transition: box-shadow 150ms;
-
-                    &:hover {
-                        box-shadow: $drop-shadow-hover;
-                    }
-
-                    &:active {
-                        box-shadow: $drop-shadow-active;
-                    }
-
-                    &:disabled {
-                        box-shadow: none;
-                        background-color: transparent;
-                    }
-
-                    .recipe-img {
-                        flex-basis: 25% !important;
-                        aspect-ratio: 1 / 1;
-                        border-radius: .5rem;
-                        max-width: calc(25% - .25rem);
-                    }
-                }
-
-                .recipe-detail-body {
-                    max-height: 0;
-                    padding: 0 1rem;
-                    overflow: hidden;
-
-                    p {
-                        margin-bottom: .5rem;
-                    }
-                }
-
-                &:has(.recipe-header[data-selected="true"]:disabled) {
-
-                    overflow: hidden auto !important;
-                    max-height: 512px;
-                    height: 512px;
-
-                    .recipe-detail-body {
-                        max-height: 100% !important;
-                        padding: 1rem !important;
-                    }
-                }
-                &:has(.recipe-header:not([data-selected="true"]):disabled) {
-                        margin: 0 !important;
-                        padding: 0 !important;
-                        max-height: 0;
-                }
-            }
+        &:focus-visible {
+            box-shadow: $drop-shadow-active;
+            background-color: $bg-cta;
+            outline: none !important;
         }
     }
 
-    .send-form {
-        flex-grow: 0;
-        width: calc(100% - 2rem);
-        display: flex;
-        flex-flow: row;
-        gap: 1rem;
-        padding: 1rem;
+    .send-button {
+        aspect-ratio: 1 / 1;
+        padding: .5rem;
+        background: $bg-cta;
+        border-radius: .5rem;
+        border: none;
+        box-shadow: $drop-shadow;
+        will-change: box-shadow, background-color;
+        transition: all 150ms;
 
-        .message-input {
-            flex-grow: 1;
-            min-width: 8rem;
-            height: 100%;
-            color: $text;
-            background: $bg-cta;
-            border-radius: .5rem;
-            border: none;
-            padding: 0 1rem;
-            box-shadow: $drop-shadow;
-            font-size: 1.5rem;
-            transition: all 150ms;
-
-            &:hover {
-                box-shadow: $drop-shadow-hover;
-                background-color: $bg-cta;
-            }
-
-            &:active {
-                box-shadow: $drop-shadow-active;
-                background-color: $bg-cta;
-            }
-
-            &:focus-visible {
-                box-shadow: $drop-shadow-active;
-                background-color: $bg-cta;
-                outline: none !important;
-            }
+        &:hover {
+            box-shadow: $drop-shadow-hover;
+            background-color: $bg-cta;
         }
 
-        .send-button {
-            aspect-ratio: 1 / 1;
-            padding: .5rem;
-            background: $bg-cta;
-            border-radius: .5rem;
-            border: none;
-            box-shadow: $drop-shadow;
-            will-change: box-shadow, background-color;
-            transition: all 150ms;
+        &:active {
+            box-shadow: $drop-shadow-active;
+            background-color: $bg-cta;
+        }
 
-            &:hover {
-                box-shadow: $drop-shadow-hover;
-                background-color: $bg-cta;
-            }
-
-            &:active {
-                box-shadow: $drop-shadow-active;
-                background-color: $bg-cta;
-            }
-
-            .send-button-image {
-                width: 2rem;
-                height: 2rem;
-                padding: 0;
-                margin: 0;
-                background-size: auto;
-                background-repeat: no-repeat;
-            }
+        .send-button-image {
+            width: 2rem;
+            height: 2rem;
+            padding: 0;
+            margin: 0;
+            background-size: auto;
+            background-repeat: no-repeat;
         }
     }
 }

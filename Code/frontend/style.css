@@ -17,6 +17,7 @@ body {
 body p {
   font-family: "Raleway";
   font-size: 1.25rem;
+  line-height: 1.75rem;
   margin: 0;
   font-weight: 500;
   color: #E3DDDD;
@@ -35,7 +36,8 @@ body h4 {
   font-weight: 700;
   color: #E3DDDD;
 }
-body .chat-container {
+
+.chat-container {
   position: absolute;
   -webkit-backdrop-filter: blur(64px);
           backdrop-filter: blur(64px);
@@ -52,7 +54,7 @@ body .chat-container {
   flex-flow: column;
   gap: 0.5rem;
 }
-body .chat-container .banner {
+.chat-container .banner {
   width: calc(100% - 1rem);
   aspect-ratio: 16/4.1;
   margin: 0.5rem;
@@ -62,24 +64,25 @@ body .chat-container .banner {
   border-radius: 0.5rem;
   box-shadow: 4px 4px 16px rgba(0, 0, 0, 0.2509803922);
 }
-body .chat-container .title {
+.chat-container .title {
   font-size: 2rem;
   margin: 0;
 }
-body .chat-container .scroll-container {
+.chat-container .scroll-container {
   width: calc(100% - 2rem);
   flex-grow: 1;
   overflow: hidden auto;
   padding: 1rem 1rem 10vh 1rem !important;
 }
-body .chat-container .scroll-container .bot-message-row {
+
+.bot-message-row {
   width: 100%;
   display: flex;
   flex-flow: row;
   justify-content: start;
   margin-bottom: 1rem;
 }
-body .chat-container .scroll-container .bot-message-row .message-container {
+.bot-message-row .message-container {
   background-color: #211D1C;
   width: -webkit-fit-content;
   width: -moz-fit-content;
@@ -92,14 +95,15 @@ body .chat-container .scroll-container .bot-message-row .message-container {
   padding: 0.5rem;
   box-shadow: 4px 4px 16px rgba(0, 0, 0, 0.2509803922);
 }
-body .chat-container .scroll-container .user-message-row {
+
+.user-message-row {
   width: 100%;
   display: flex;
   flex-flow: row;
   justify-content: end;
   margin-bottom: 1rem;
 }
-body .chat-container .scroll-container .user-message-row .message-container {
+.user-message-row .message-container {
   background-color: #34434A;
   width: -webkit-fit-content;
   width: -moz-fit-content;
@@ -112,70 +116,97 @@ body .chat-container .scroll-container .user-message-row .message-container {
   padding: 0.5rem;
   box-shadow: 4px 4px 16px rgba(0, 0, 0, 0.2509803922);
 }
-body .chat-container .scroll-container .recipe-container {
-  width: 100%;
-  max-height: 162px;
-  display: block;
-  padding: 0;
-  background: #211D1C;
-  box-shadow: 4px 4px 16px rgba(0, 0, 0, 0.2509803922);
-  border-radius: 1rem;
-  margin-bottom: 1rem;
-  transition: all 333ms ease-out;
-  overflow: hidden !important;
+
+.cocktails-container {
+  display: flex;
+  flex-flow: column;
 }
-body .chat-container .scroll-container .recipe-container .recipe-header {
+.cocktails-container .cocktail-container {
+  overflow: hidden;
+  display: block;
   width: 100%;
-  display: inline-flex;
+  background: #34434A;
+  border-radius: 1rem;
+  border: none;
+  padding: 0;
+  margin-bottom: 1rem;
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5019607843);
+  will-change: height, box-shadow, background-color;
+  transition: box-shadow 150ms, background-color 150ms, height 300ms;
+}
+.cocktails-container .cocktail-container .cocktail-header {
+  display: flex;
+  flex-flow: row;
   gap: 2rem;
   align-items: center;
-  padding: 0.5rem;
-  background-color: #34434A;
-  border: none;
-  text-align: start;
-  border-radius: 1rem;
-  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5019607843);
-  transition: box-shadow 150ms;
+  margin: 0.5rem;
 }
-body .chat-container .scroll-container .recipe-container .recipe-header:hover {
-  box-shadow: 4px 4px 16px #0f5a93;
-}
-body .chat-container .scroll-container .recipe-container .recipe-header:active {
-  box-shadow: 2px 2px 8px #0f5a93;
-}
-body .chat-container .scroll-container .recipe-container .recipe-header:disabled {
-  box-shadow: none;
-  background-color: transparent;
-}
-body .chat-container .scroll-container .recipe-container .recipe-header .recipe-img {
-  flex-basis: 25% !important;
+.cocktails-container .cocktail-container .cocktail-header .cocktail-img {
+  width: 20%;
   aspect-ratio: 1/1;
   border-radius: 0.5rem;
-  max-width: calc(25% - 0.25rem);
 }
-body .chat-container .scroll-container .recipe-container .recipe-detail-body {
+.cocktails-container .cocktail-container .cocktail-body {
+  display: flex;
+  flex-flow: column;
+  margin: 0 0.5rem;
   max-height: 0;
-  padding: 0 1rem;
+}
+.cocktails-container .cocktail-container .cocktail-body > * {
+  text-align: left;
+  margin: 0.5rem;
+}
+.cocktails-container .cocktail-container:disabled > .cocktail-body {
+  margin: 0.5rem;
+  max-height: unset;
+}
+.cocktails-container .cocktail-container[data-selected=false] {
+  padding: 0 !important;
+  margin: 0 !important;
+  height: 0 !important;
+}
+
+.selection-button-container {
+  display: flex;
+  flex-flow: column;
+  margin-bottom: 1rem;
+}
+.selection-button-container .selction-button {
+  padding: 1rem;
+  margin: 0.25rem 0;
+  background: #34434A;
+  color: #E3DDDD;
+  font-size: 1.5rem;
+  border-radius: 0.5rem;
+  border: none;
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5019607843);
+  will-change: box-shadow, background-color;
+  transition: all 150ms;
   overflow: hidden;
 }
-body .chat-container .scroll-container .recipe-container .recipe-detail-body p {
-  margin-bottom: 0.5rem;
+.selection-button-container .selction-button:hover {
+  box-shadow: 4px 4px 16px #0f5a93;
+  background-color: #34434A;
 }
-body .chat-container .scroll-container .recipe-container:has(.recipe-header[data-selected=true]:disabled) {
-  overflow: hidden auto !important;
-  max-height: 512px;
-  height: 512px;
+.selection-button-container .selction-button:active {
+  box-shadow: 2px 2px 8px #0f5a93;
+  background-color: #34434A;
 }
-body .chat-container .scroll-container .recipe-container:has(.recipe-header[data-selected=true]:disabled) .recipe-detail-body {
-  max-height: 100% !important;
-  padding: 1rem !important;
+.selection-button-container .selction-button:disabled {
+  box-shadow: 4px 4px 16px rgba(0, 0, 0, 0.2509803922);
+  background-color: rgba(97, 87, 86, 0.5019607843);
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 0.5rem;
 }
-body .chat-container .scroll-container .recipe-container:has(.recipe-header:not([data-selected=true]):disabled) {
-  margin: 0 !important;
+.selection-button-container .selction-button[data-selected=false] {
   padding: 0 !important;
-  max-height: 0;
+  margin: 0 !important;
+  height: 0 !important;
 }
-body .send-form {
+
+.send-form {
   flex-grow: 0;
   width: calc(100% - 2rem);
   display: flex;
@@ -183,7 +214,7 @@ body .send-form {
   gap: 1rem;
   padding: 1rem;
 }
-body .send-form .message-input {
+.send-form .message-input {
   flex-grow: 1;
   min-width: 8rem;
   height: 100%;
@@ -196,20 +227,20 @@ body .send-form .message-input {
   font-size: 1.5rem;
   transition: all 150ms;
 }
-body .send-form .message-input:hover {
+.send-form .message-input:hover {
   box-shadow: 4px 4px 16px #0f5a93;
   background-color: #34434A;
 }
-body .send-form .message-input:active {
+.send-form .message-input:active {
   box-shadow: 2px 2px 8px #0f5a93;
   background-color: #34434A;
 }
-body .send-form .message-input:focus-visible {
+.send-form .message-input:focus-visible {
   box-shadow: 2px 2px 8px #0f5a93;
   background-color: #34434A;
   outline: none !important;
 }
-body .send-form .send-button {
+.send-form .send-button {
   aspect-ratio: 1/1;
   padding: 0.5rem;
   background: #34434A;
@@ -219,15 +250,15 @@ body .send-form .send-button {
   will-change: box-shadow, background-color;
   transition: all 150ms;
 }
-body .send-form .send-button:hover {
+.send-form .send-button:hover {
   box-shadow: 4px 4px 16px #0f5a93;
   background-color: #34434A;
 }
-body .send-form .send-button:active {
+.send-form .send-button:active {
   box-shadow: 2px 2px 8px #0f5a93;
   background-color: #34434A;
 }
-body .send-form .send-button .send-button-image {
+.send-form .send-button .send-button-image {
   width: 2rem;
   height: 2rem;
   padding: 0;
