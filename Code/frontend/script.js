@@ -24,7 +24,8 @@ function sendMessage(message) {
     })
         .then(res => res.json())
         .then(data => {
-            handleResponse(data[0]);
+            for(i = 0; i <= data.length; i++)
+            handleResponse(data[i]);
         });
 }
 

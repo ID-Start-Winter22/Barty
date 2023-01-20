@@ -2,12 +2,26 @@ version: "3.1"
 
 stories:
 
-- story: happy path
+- story: find cocktail default
   steps:
-  - intent: greet
+  - action: action_session_start
+  - intent: greetWithName
+  - action: utter_how_can_i_help
+  - intent: cocktail
+  - action: utter_cocktail
   - action: action_display_taste
   - intent: taste_selected
-  - action: action_handle_taste
   - action: action_display_alcohol
   - intent: alcohol_selected
-  - action: action_handle_alcohol
+  - action: action_get_cocktails
+
+- story: find cocktail alcohol
+  steps:
+  - action: action_session_start
+  - intent: greetWithName
+  - action: utter_how_can_i_help
+  - intent: alcohol
+  - action: action_alcoholic
+  - action: action_display_taste
+  - intent: taste_selected
+  - action: action_get_cocktails

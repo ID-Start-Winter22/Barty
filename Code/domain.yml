@@ -2,45 +2,61 @@ version: "3.1"
 
 intents:
   - greet
-  - goodbye
-  - affirm
-  - deny
-  - mood_great
-  - mood_unhappy
-  - bot_challenge
+  - greetWithName
+  - cocktail
+  - alcohol
   - taste_selected
   - alcohol_selected
+  - bot_challenge
 
 actions:
+  - action_session_start 
   - action_display_taste
-  - action_handle_taste
   - action_display_alcohol
-  - action_handle_alcohol
   - action_get_cocktails
+  - action_alcoholic
+
+entities:
+  - alcohol
+  - taste
+  - name
 
 slots:
   taste:
     type: text
     influence_conversation: false
     mappings:
-    - type: custom
+    - type: from_entity
+      entity: taste
+  alcohol:
+    type: text
+    influence_conversation: false
+    mappings:
+    - type: from_entity
+      entity: alcohol
+  name:
+    type: text
+    influence_conversation: true
+    mappings:
+    - type: from_entity
+      entity: name
+
 
 responses:
-  utter_greet:
-  - text: "Hey! How are you?"
 
-  utter_cheer_up:
-  - text: "Here is something to cheer you up:"
-    image: "https://i.imgur.com/nGF1K8f.jpg"
+  utter_how_can_i_help:
+  - text: "Ok {name}. Wie kann ich dir Helfen?"
+  - text: "Hallo {name}. Was kann ich für dich tun?"
+  - text: "Schön dich kennenzulernen {name}. Wie kann ich dir Helfen?"
+  - text: "Ok {name}. Was kann ich für dich tun?"
+  - text: "Hallo {name}. Wie kann ich dir Helfen?"
+  - text: "Schön dich kennenzulernen {name}. Was kann ich für dich tun?"
 
-  utter_did_that_help:
-  - text: "Did that help you?"
-
-  utter_happy:
-  - text: "Great, carry on!"
-
-  utter_goodbye:
-  - text: "Bye"
+  utter_cocktail:
+  - text: "Gute wahl, da kenne ich so einige."
+  - text: "Damit helfe ich doch gerne."
+  - text: "Einen Cocktail? Jaja spaß müssen wir alle ab und an haben"
+  - text: "Dein wunsch ist mir befehl"
 
   utter_iamabot:
   - text: "I am a bot, powered by Rasa."

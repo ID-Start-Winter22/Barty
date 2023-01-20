@@ -3,85 +3,64 @@ version: "3.1"
 nlu:
 - intent: greet
   examples: |
-    - hey
-    - hello
-    - hi
-    - hello there
-    - good morning
-    - good evening
-    - moin
-    - hey there
-    - let's go
-    - hey dude
-    - goodmorning
-    - goodevening
-    - good afternoon
+    - Hi
+    - Servus
+    - Moin
+    - Hallo
+    - Guten tag
+    - Guten abend
+    - Hallöchen
+    - Tach
 
-- intent: goodbye
+- intent: greetWithName
   examples: |
-    - cu
-    - good by
-    - cee you later
-    - good night
-    - bye
-    - goodbye
-    - have a nice day
-    - see you around
-    - bye bye
-    - see you later
+    - Hi ich bin [tatjane](name)
+    - Ich bin [julia](name)
+    - guten tag, mein name ist [linus](name)
+    - Hallo, ich bin [tatjana](name)
+    - Servus, ich heiße [georg](name)
+    - Ich bin der [uwe](name) und ich bin auch dabei
 
-- intent: affirm
+- intent: name
   examples: |
-    - yes
-    - y
-    - indeed
-    - of course
-    - that sounds good
-    - correct
+    - Ich bin [tatjane](name)
+    - Ich heiße [julia](name)
+    - Mein name ist [linus](name)
+    - Ich bin [tatjana](name)
+    - Ich heiße [georg](name)
+    - Ich bin der [uwe](name)
+    - Da [Dieter](name)
 
-- intent: deny
+- intent: cocktail
   examples: |
-    - no
-    - n
-    - never
-    - I don't think so
-    - don't like that
-    - no way
-    - not really
+    - Ich suche einen cocktail
+    - Ich hätte gerne einen cocktail
+    - Cocktail
+    - Ich brauch ein cocktail
+    - Kannst du mir helfen einen cocktail zu finden
 
-- intent: mood_great
+- intent: alcohol
   examples: |
-    - perfect
-    - great
-    - amazing
-    - feeling like a king
-    - wonderful
-    - I am feeling very good
-    - I am great
-    - I am amazing
-    - I am going to save the world
-    - super stoked
-    - extremely good
-    - so so perfect
-    - so good
-    - so perfect
+    - Ich brauch alkohol
+    - ich brauch was zu trinken
+    - Ich will heute saufen
+    - saufen
+    - alcohol
+    - Ich stürz heute ab
 
-- intent: mood_unhappy
+- intent: taste_selected
   examples: |
-    - my day was horrible
-    - I am sad
-    - I don't feel very well
-    - I am disappointed
-    - super sad
-    - I'm so sad
-    - sad
-    - very sad
-    - unhappy
-    - not good
-    - not very good
-    - extremly sad
-    - so saad
-    - so sad
+    - taste [fruchtig](taste)
+    - taste [suess](taste)
+    - taste [sauer](taste)
+    - taste [bitter](taste)
+    - taste [erfrischend](taste)
+    - taste [cremig](taste)
+
+- intent: alcohol_selected
+  examples: |
+    - [alcoholic](alcohol)
+    - [Non alcoholic](alcohol)
 
 - intent: bot_challenge
   examples: |
@@ -89,11 +68,3 @@ nlu:
     - are you a human?
     - am I talking to a bot?
     - am I talking to a human?
-
-- intent: taste_selected
-  examples: |
-    - /taste_selected
-
-- intent: alcohol_selected
-  examples: |
-    - /alcohol_selected
