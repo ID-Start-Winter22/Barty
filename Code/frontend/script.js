@@ -17,7 +17,7 @@ function sendMessage(message) {
         "message": message,
     }
 
-    fetch("http://localhost:5005/webhooks/rest/webhook", {
+    fetch("http://54.216.103.148:5005/webhooks/rest/webhook", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(package)

@@ -14,6 +14,8 @@ nlu:
 
 - intent: greetWithName
   examples: |
+    - Hi
+    - Hallo
     - Hi ich bin [tatjane](name)
     - Ich bin [julia](name)
     - guten tag, mein name ist [linus](name)
@@ -37,16 +39,7 @@ nlu:
     - Ich hätte gerne einen cocktail
     - Cocktail
     - Ich brauch ein cocktail
-    - Kannst du mir helfen einen cocktail zu finden
-
-- intent: alcohol
-  examples: |
-    - Ich brauch alkohol
-    - ich brauch was zu trinken
-    - Ich will heute saufen
-    - saufen
-    - alcohol
-    - Ich stürz heute ab
+    - Kannst du mir helfen einen cocktail zu finden?
 
 - intent: taste_selected
   examples: |

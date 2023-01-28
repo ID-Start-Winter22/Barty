@@ -37,7 +37,7 @@ from rasa_sdk.executor import CollectingDispatcher
 import json
 import random
 
-with open(".\data\cocktail.json", "r") as file:
+with open("./actions/cocktail.json", "r") as file:
     rawData = json.load(file)
 data = rawData["drinks"]
 
@@ -47,7 +47,7 @@ class StartSession(Action):
         return "action_session_start"
     
     def run(self, dispatcher, tracker, domain):
-        dispatcher.utter_message(text = "👋 Hi, ich bin Berty der Barkeeper")
+        dispatcher.utter_message(text = "👋 Hi, ich bin Barty der Barkeeper")
         dispatcher.utter_message(text = "Wer ist den die entzückende Person mit der ich rede")
 
 
@@ -121,9 +121,9 @@ class getCocktails(Action):
         taste = tracker.get_slot("taste")
         
         results = filterCocktails(taste, alcohol)
-        
-        dispatcher.utter_message(text = reactions[tracker.get_slot("alcohol")][0])
-        dispatcher.utter_message(text = random.sample(cocktailSelectionText, 1))
+        print(tracker.get_slot("alcohol"))
+        dispatcher.utter_message(text = reactions[tracker.get_slot("alcohol")])
+        dispatcher.utter_message(text = random.sample(cocktailSelectionText, 1)[0])
         dispatcher.utter_message(json_message = results)         
         
 def filterCocktails(taste, alcohol):
