@@ -1,0 +1,268 @@
+@font-face {
+  font-family: "Raleway";
+  src: url(https://fonts.googleapis.com/css?family=Raleway);
+  font-weight: 500 700;
+}
+body {
+  background: linear-gradient(rgba(0, 0, 0, 0.6745098039), rgba(0, 0, 0, 0.6745098039)), url("../assets/pexels-chris-f-1283219.jpg");
+  background-size: cover;
+  background-position: center;
+  color: #E3DDDD;
+  height: 100vh;
+  width: 100vw;
+  margin: 0 !important;
+  overflow: hidden;
+  display: block;
+}
+body p {
+  font-family: "Raleway";
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+  margin: 0;
+  font-weight: 500;
+  color: #E3DDDD;
+}
+body h3 {
+  font-family: "Raleway";
+  font-size: 2rem;
+  margin: 0;
+  font-weight: 700;
+  color: #E3DDDD;
+}
+body h4 {
+  font-family: "Raleway";
+  font-size: 1.5rem;
+  margin: 0;
+  font-weight: 700;
+  color: #E3DDDD;
+}
+
+.chat-container {
+  position: absolute;
+  -webkit-backdrop-filter: blur(64px);
+          backdrop-filter: blur(64px);
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(97, 87, 86, 0.5019607843);
+  border-radius: 1rem;
+  height: 95vh;
+  width: 50vh;
+  max-width: 100%;
+  overflow: hidden;
+  display: flex;
+  flex-flow: column;
+  gap: 0.5rem;
+}
+.chat-container .banner {
+  width: calc(100% - 1rem);
+  aspect-ratio: 16/4.1;
+  margin: 0.5rem;
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: block;
+  border-radius: 0.5rem;
+  box-shadow: 4px 4px 16px rgba(0, 0, 0, 0.2509803922);
+}
+.chat-container .title {
+  font-size: 2rem;
+  margin: 0;
+}
+.chat-container .scroll-container {
+  width: calc(100% - 2rem);
+  flex-grow: 1;
+  overflow: hidden auto;
+  padding: 1rem 1rem 10vh 1rem !important;
+}
+
+.bot-message-row {
+  width: 100%;
+  display: flex;
+  flex-flow: row;
+  justify-content: start;
+  margin-bottom: 1rem;
+}
+.bot-message-row .message-container {
+  background-color: #211D1C;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  max-width: 75%;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+  box-shadow: 4px 4px 16px rgba(0, 0, 0, 0.2509803922);
+}
+
+.user-message-row {
+  width: 100%;
+  display: flex;
+  flex-flow: row;
+  justify-content: end;
+  margin-bottom: 1rem;
+}
+.user-message-row .message-container {
+  background-color: #34434A;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  max-width: 75%;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+  box-shadow: 4px 4px 16px rgba(0, 0, 0, 0.2509803922);
+}
+
+.cocktails-container {
+  display: flex;
+  flex-flow: column;
+}
+.cocktails-container .cocktail-container {
+  overflow: hidden;
+  display: block;
+  width: 100%;
+  background: #34434A;
+  border-radius: 1rem;
+  border: none;
+  padding: 0;
+  margin-bottom: 1rem;
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5019607843);
+  will-change: height, box-shadow, background-color;
+  transition: box-shadow 150ms, background-color 150ms, height 300ms;
+}
+.cocktails-container .cocktail-container .cocktail-header {
+  display: flex;
+  flex-flow: row;
+  gap: 2rem;
+  align-items: center;
+  margin: 0.5rem;
+}
+.cocktails-container .cocktail-container .cocktail-header .cocktail-img {
+  width: 20%;
+  aspect-ratio: 1/1;
+  border-radius: 0.5rem;
+}
+.cocktails-container .cocktail-container .cocktail-body {
+  display: flex;
+  flex-flow: column;
+  margin: 0 0.5rem;
+  max-height: 0;
+}
+.cocktails-container .cocktail-container .cocktail-body > * {
+  text-align: left;
+  margin: 0.5rem;
+}
+.cocktails-container .cocktail-container:disabled > .cocktail-body {
+  margin: 0.5rem;
+  max-height: unset;
+}
+.cocktails-container .cocktail-container[data-selected=false] {
+  padding: 0 !important;
+  margin: 0 !important;
+  height: 0 !important;
+}
+
+.selection-button-container {
+  display: flex;
+  flex-flow: column;
+  margin-bottom: 1rem;
+}
+.selection-button-container .selction-button {
+  padding: 1rem;
+  margin: 0.25rem 0;
+  background: #34434A;
+  color: #E3DDDD;
+  font-size: 1.5rem;
+  border-radius: 0.5rem;
+  border: none;
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5019607843);
+  will-change: box-shadow, background-color;
+  transition: all 150ms;
+  overflow: hidden;
+}
+.selection-button-container .selction-button:hover {
+  box-shadow: 4px 4px 16px #0f5a93;
+  background-color: #34434A;
+}
+.selection-button-container .selction-button:active {
+  box-shadow: 2px 2px 8px #0f5a93;
+  background-color: #34434A;
+}
+.selection-button-container .selction-button:disabled {
+  box-shadow: 4px 4px 16px rgba(0, 0, 0, 0.2509803922);
+  background-color: rgba(97, 87, 86, 0.5019607843);
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 0.5rem;
+}
+.selection-button-container .selction-button[data-selected=false] {
+  padding: 0 !important;
+  margin: 0 !important;
+  height: 0 !important;
+}
+
+.send-form {
+  flex-grow: 0;
+  width: calc(100% - 2rem);
+  display: flex;
+  flex-flow: row;
+  gap: 1rem;
+  padding: 1rem;
+}
+.send-form .message-input {
+  flex-grow: 1;
+  min-width: 8rem;
+  height: 100%;
+  color: #E3DDDD;
+  background: #34434A;
+  border-radius: 0.5rem;
+  border: none;
+  padding: 0 1rem;
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5019607843);
+  font-size: 1.5rem;
+  transition: all 150ms;
+}
+.send-form .message-input:hover {
+  box-shadow: 4px 4px 16px #0f5a93;
+  background-color: #34434A;
+}
+.send-form .message-input:active {
+  box-shadow: 2px 2px 8px #0f5a93;
+  background-color: #34434A;
+}
+.send-form .message-input:focus-visible {
+  box-shadow: 2px 2px 8px #0f5a93;
+  background-color: #34434A;
+  outline: none !important;
+}
+.send-form .send-button {
+  aspect-ratio: 1/1;
+  padding: 0.5rem;
+  background: #34434A;
+  border-radius: 0.5rem;
+  border: none;
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5019607843);
+  will-change: box-shadow, background-color;
+  transition: all 150ms;
+}
+.send-form .send-button:hover {
+  box-shadow: 4px 4px 16px #0f5a93;
+  background-color: #34434A;
+}
+.send-form .send-button:active {
+  box-shadow: 2px 2px 8px #0f5a93;
+  background-color: #34434A;
+}
+.send-form .send-button .send-button-image {
+  width: 2rem;
+  height: 2rem;
+  padding: 0;
+  margin: 0;
+  background-size: auto;
+  background-repeat: no-repeat;
+}/*# sourceMappingURL=style.css.map */
